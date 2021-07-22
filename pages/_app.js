@@ -27,11 +27,14 @@ const GlobalStyle = createGlobalStyle`
 
   * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   }
 `;
 
 const theme = {
   colors: {
+    //Brand
     primary: 'rgb(71, 118, 255)',
     primary12: 'rgb(71, 118, 255, 0.12)',
     primary24: 'rgb(71, 118, 255, 0.24)',
@@ -39,6 +42,7 @@ const theme = {
     //UI
     panel: '#191920',
     border: 'rgba(144, 144, 144, 0.12)',
+    body: '#9FA2AF',
 
     // General
     white: '#ffffff',

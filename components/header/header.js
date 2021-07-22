@@ -14,16 +14,16 @@ const HeaderWrapper = styled.header`
   background-color: rgba(9, 9, 11, 0.76);
   backdrop-filter: saturate(100%) blur(48px);
   -webkit-backdrop-filter: saturate(100%) blur(48px);
-  border-bottom: 0.5px solid ${({ theme }) => theme.colors.border};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   z-index: 99;
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
+  padding: 0 24px;
 `;
 
 const HeaderContainer = styled.div`
-  padding: 0 48px;
   height: 80px;
   width: 100%;
   max-width: 1200px;
@@ -31,10 +31,6 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @media (max-width: 992px) {
-    padding: 0 24px;
-  }
 `;
 
 const Logo = styled.a`

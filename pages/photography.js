@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import styled from 'styled-components';
 import { NextSeo } from 'next-seo';
 
@@ -10,12 +12,12 @@ const Wrapper = styled.main`
 `;
 
 const SEO = {
-  title: 'Sigurdarson – Photography',
+  title: 'Photography - Sigurdarson — Brand & Product Designer (UI/UX)',
   canonical: 'https://sigurdarson.is/photography',
 
   openGraph: {
     url: 'https://sigurdarson.is/photography',
-    title: 'Sigurdarson – Photography',
+    title: 'Photography - Sigurdarson — Brand & Product Designer (UI/UX)',
   },
 };
 
