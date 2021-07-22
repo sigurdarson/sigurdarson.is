@@ -15,7 +15,7 @@ const HeaderWrapper = styled.header`
   backdrop-filter: saturate(100%) blur(48px);
   -webkit-backdrop-filter: saturate(100%) blur(48px);
   border-bottom: 0.5px solid ${({ theme }) => theme.colors.border};
-  z-index: 10;
+  z-index: 99;
   position: sticky;
   top: 0;
   left: 0;

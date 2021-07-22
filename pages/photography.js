@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-
 import { NextSeo } from 'next-seo';
 
 //Components
 import Photography from '../components/photography/photography';
 
-//STyled Components
+//Styled Components
 const Wrapper = styled.main`
   padding: 0 24px;
 `;
