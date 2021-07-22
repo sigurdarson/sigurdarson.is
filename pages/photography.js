@@ -31,7 +31,7 @@ const AboutPage = () => (
 
 export async function getServerSideProps() {
   await new Promise((resolve) => {
-    setTimeout(resolve, 1000);
+    setTimeout(resolve, 500);
   });
 
   return {
