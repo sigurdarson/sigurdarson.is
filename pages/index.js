@@ -13,7 +13,7 @@ const Hero = styled.section`
 `;
 
 const HeroContainer = styled.div`
-  padding: 0 0 96px 0;
+  padding: 0 0 148px 0;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -27,17 +27,18 @@ const HeroContent = styled.div`
 
 const Title = styled.h1`
   font-size: 48px;
-  font-weight: 500;
+  font-weight: 400;
   color: ${({ theme }) => theme.colors.white};
-  line-height: 1.4;
+  line-height: 1.5;
   margin-bottom: 12px;
 `;
 
 const Description = styled.p`
   font-size: 18px;
   line-height: 1.5;
-  color: ${({ theme }) => theme.colors.body};
+  color: ${({ theme }) => theme.colors.paragraph};
   margin-bottom: 24px;
+  max-width: 450px;
 `;
 
 const StartProject = styled.a`

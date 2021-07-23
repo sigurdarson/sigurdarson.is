@@ -74,7 +74,7 @@ const MenuContact = styled.a`
   color: ${({ theme }) => theme.colors.primary};
   background: ${({ theme }) => theme.colors.primary12};
   line-height: 20px;
-  padding: 10px 24px;
+  padding: 10px 20px;
   border-radius: 40px;
   cursor: pointer;
   transition: background 0.2s ease;

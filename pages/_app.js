@@ -12,11 +12,28 @@ import SEO from '../next-seo.config';
 import Header from '../components/header/header';
 
 const GlobalStyle = createGlobalStyle`
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/Gilroy-SemiBold.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Gilroy-Medium.otf);
+  font-display: swap;
+}
+
   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Gilroy', sans-serif;
     background: #09090b;
   }
 
@@ -40,9 +57,10 @@ const theme = {
     primary24: 'rgb(71, 118, 255, 0.24)',
 
     //UI
-    panel: '#191920',
+    panel: '#18181B',
+    panelHover: '1E1E22',
     border: 'rgba(144, 144, 144, 0.12)',
-    body: '#9FA2AF',
+    paragraph: '#9FA2AF',
 
     // General
     white: '#ffffff',
@@ -83,6 +101,18 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <link
+          rel='preload'
+          href='/fonts/Gilroy-SemiBold.otf'
+          as='font'
+          crossOrigin='anonymous'
+        />
+        <link
+          rel='preload'
+          href='/fonts/Gilroy-Medium.otf'
+          as='font'
+          crossOrigin='anonymous'
+        />
         <link
           rel='icon'
           href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛸</text></svg>'
