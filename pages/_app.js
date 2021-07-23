@@ -47,6 +47,11 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   margin: 0;
   }
+
+  ::selection {
+    background: rgb(71, 118, 255, 0.12);
+    color: rgb(71, 118, 255);
+  }
 `;
 
 const theme = {
