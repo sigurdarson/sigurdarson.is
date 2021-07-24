@@ -10,6 +10,7 @@ import SEO from '../next-seo.config';
 
 //Components
 import Header from '../components/header/header';
+import Newsletter from '../components/newsletter/newsletter';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -62,8 +63,9 @@ const theme = {
     primary24: 'rgb(71, 118, 255, 0.24)',
 
     //UI
-    panel: '#18181B',
-    panelHover: '1E1E22',
+    background: '#09090b',
+    panel: '#191920',
+    panelHover: '#23232c',
     border: 'rgba(144, 144, 144, 0.12)',
     paragraph: '#9FA2AF',
 
@@ -131,6 +133,7 @@ export default function App({ Component, pageProps }) {
         <DefaultSeo {...SEO} />
         <Header />
         <Component {...pageProps} />
+        <Newsletter />
       </ThemeProvider>
     </>
   );

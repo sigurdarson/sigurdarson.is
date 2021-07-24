@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 //Components
+import { Mail, FileText, Linkedin, Dribbble } from 'react-feather';
 
 //Styled Compoenents
 const Wrapper = styled.main`
@@ -10,6 +11,10 @@ const Wrapper = styled.main`
 const Hero = styled.section`
   padding: 148px 0 0 0;
   width: 100%;
+
+  @media (max-width: 992px) {
+    padding: 96px 0 0 0;
+  }
 `;
 
 const HeroContainer = styled.div`
@@ -19,6 +24,11 @@ const HeroContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    padding: 0 0 96px 0;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -31,6 +41,14 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.white};
   line-height: 1.5;
   margin-bottom: 12px;
+
+  @media (max-width: 1092px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 32px;
+  }
 `;
 
 const Description = styled.p`
@@ -54,6 +72,58 @@ const HeroArt = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+`;
+
+const HeroLinksContainer = styled.section`
+  padding: 48px 0;
+`;
+
+const HeroLinks = styled.div`
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 24px;
+  margin: 0 auto;
+
+  @media (max-width: 1092px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const HeroLinkItem = styled.a`
+  padding: 20px;
+  background: ${({ theme }) => theme.colors.panel};
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 12px;
+  transition: background 0.2s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.panelHover};
+  }
+
+  div {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    font-size: 16px;
+    color: ${({ theme }) => theme.colors.white};
+  }
 `;
 
 export default function Home() {
@@ -136,6 +206,40 @@ export default function Home() {
             </HeroArt>
           </HeroContainer>
         </Hero>
+        <HeroLinksContainer>
+          <HeroLinks>
+            <HeroLinkItem
+              href='https://sigurdarson.notion.site/Resume-Gunnar-Sigur-arson-a223fafa7f1140a99547780c03ac9700'
+              target='_blank'>
+              <div>
+                <FileText size='20' color='#9FA2AF' />
+              </div>
+              <p>Resume</p>
+            </HeroLinkItem>
+            <HeroLinkItem href='mailto:hello@sigurdarson.is' target='_blank'>
+              <div>
+                <Mail size='20' color='#9FA2AF' />
+              </div>
+              <p>Email</p>
+            </HeroLinkItem>
+            <HeroLinkItem
+              href='https://dribbble.com/Sigurdarson'
+              target='_blank'>
+              <div>
+                <Dribbble size='20' color='#9FA2AF' />
+              </div>
+              <p>Dribbble</p>
+            </HeroLinkItem>
+            <HeroLinkItem
+              href='https://www.linkedin.com/in/sigurdarson/'
+              target='_blank'>
+              <div>
+                <Linkedin size='20' color='#9FA2AF' />
+              </div>
+              <p>LinkedIn</p>
+            </HeroLinkItem>
+          </HeroLinks>
+        </HeroLinksContainer>
       </Wrapper>
     </>
   );

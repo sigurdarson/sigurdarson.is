@@ -162,11 +162,6 @@ class Header extends Component {
             <MenuList>
               <MenuItem>
                 <Link href='/about'>
-                  <MenuLink>Resume</MenuLink>
-                </Link>
-              </MenuItem>
-              <MenuItem>
-                <Link href='/about'>
                   <MenuLink>About</MenuLink>
                 </Link>
               </MenuItem>

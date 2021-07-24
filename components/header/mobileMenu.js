@@ -14,11 +14,10 @@ const MobileMenuWrapper = styled.div`
   right: 24px;
   display: flex;
   text-align: center;
-  background: #fafafa;
+  background: ${({ theme }) => theme.colors.panel};
   padding: 12px;
-  border-radius: 4px;
-  border: 0.5px solid ${colors.lightBlue};
-  box-shadow: rgba(229, 232, 239) 5px 5px 40px -15px;
+  border-radius: 12px;
+  border: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
 const MenuList = styled.ul`
@@ -35,18 +34,18 @@ const MenuLink = styled.a`
   margin-bottom: 10px;
   width: 100%;
   display: flex;
-  color: ${colors.black};
+  color: ${({ theme }) => theme.colors.white};
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 6px;
   transition: background 0.2s ease;
   -webkit-transition: background 0.2s ease;
   -moz-transition: background 0.2s ease;
   cursor: pointer;
   font-weight: 500;
+
   &:hover {
-    background: ${colors.main10};
-    color: ${colors.main};
+    background: ${({ theme }) => theme.colors.panelHover};
   }
 `;
 
@@ -56,14 +55,17 @@ const Contact = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${colors.main10};
-  color: ${colors.main};
+  background: ${({ theme }) => theme.colors.primary12};
+  color: ${({ theme }) => theme.colors.primary};
   transition: background 0.2s ease;
   -webkit-transition: background 0.2s ease;
   -moz-transition: background 0.2s ease;
+  border-radius: 6px;
+
   &:hover {
-    background: ${colors.main25};
+    background: ${({ theme }) => theme.colors.primary24};
   }
+
   span {
     margin-left: 10px;
     margin-bottom: -3px;
@@ -75,18 +77,13 @@ export default function MobileMenu(props) {
     <MobileMenuWrapper>
       <MenuList>
         <MenuItem onClick={props.click}>
+          <Link href='/'>
+            <MenuLink>Home</MenuLink>
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={props.click}>
           <Link href='/about'>
-            <MenuLink>About me</MenuLink>
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={props.click}>
-          <Link href='/blog'>
-            <MenuLink>Thoughts</MenuLink>
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={props.click}>
-          <Link href='/services'>
-            <MenuLink>Services</MenuLink>
+            <MenuLink>About</MenuLink>
           </Link>
         </MenuItem>
         <MenuItem onClick={props.click}>
