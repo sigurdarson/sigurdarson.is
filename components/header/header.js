@@ -88,7 +88,7 @@ const MobileIcon = styled.div`
   cursor: pointer;
   border-radius: 4px;
   height: 40px;
-  padding: 0 20px;
+  padding: 0 0 0 20px;
   display: none;
 
   p {
@@ -160,12 +160,12 @@ class Header extends Component {
             <MenuList>
               <MenuItem>
                 <Link href='/about'>
-                  <MenuLink>About</MenuLink>
+                  <MenuLink>About me</MenuLink>
                 </Link>
               </MenuItem>
               <MenuItem>
                 <Link href='/photography'>
-                  <MenuLink>Photography</MenuLink>
+                  <MenuLink>Darkroom</MenuLink>
                 </Link>
               </MenuItem>
               <MenuItem>

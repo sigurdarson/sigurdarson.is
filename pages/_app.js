@@ -11,6 +11,7 @@ import SEO from '../next-seo.config';
 //Components
 import Header from '../components/header/header';
 import Newsletter from '../components/newsletter/newsletter';
+import Footer from '../components/footer/footer';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -137,6 +138,7 @@ export default function App({ Component, pageProps }) {
         {showComponent && <Header />}
         <Component {...pageProps} />
         {showComponent && <Newsletter />}
+        {showComponent && <Footer />}
       </ThemeProvider>
     </>
   );

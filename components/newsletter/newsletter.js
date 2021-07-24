@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const NewsletterContainer = styled.div`
   margin-top: 96px;
   @media (max-width: 992px) {
-    margin: 96px 24px 0 24px;
+    margin: 48px 24px 0 24px;
   }
 `;
 
@@ -26,7 +26,7 @@ const Title = styled.h2`
 `;
 
 const Description = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 20px;
   color: ${({ theme }) => theme.colors.paragraph};
 `;
@@ -57,6 +57,13 @@ const Input = styled.input`
   font-size: 14px;
   color: ${({ theme }) => theme.colors.paragraph};
   -webkit-appearance: none;
+  transition: border 0.3s ease;
+  -webkit-transition: border 0.3s ease;
+  -moz-transition: border 0.3s ease;
+
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.paragraph};
@@ -64,6 +71,7 @@ const Input = styled.input`
 
   &:focus {
     outline: none;
+    border: 1px solid ${({ theme }) => theme.colors.primary};
   }
 
   @media (max-width: 992px) {
@@ -92,8 +100,9 @@ const Button = styled.button`
   transition: background 0.3s ease;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
+
   &:hover {
-    opacity: 0.72;
+    background: #5d86ff;
   }
 `;
 
@@ -102,6 +111,7 @@ const ButtonText = styled.span`
   text-align: center;
   font-weight: 400;
   font-size: 14px;
+  margin-top: -3px;
   font-family: 'Gilroy', sans-serif;
 `;
 
@@ -175,7 +185,7 @@ export default function Newsletter() {
         <NewsletterDefault>
           <Title>Subscribe to my newsletter</Title>
           <Description>
-            Get emails from me about design, development, and tech.
+            Get emails about design, development, and tech.
           </Description>
 
           <Form name='newsletter' onSubmit={submit}>

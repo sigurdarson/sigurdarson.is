@@ -20,4 +20,35 @@
           }
         ]
       }
-    ]}
+    ],
+    "redirects": [
+      {
+        "source": "/twitter",
+        "destination": "https://twitter.com/GSigurdarson"
+      },
+      {
+        "source": "/dribbble",
+        "destination": "https://dribbble.com/Sigurdarson"
+      },
+      {
+        "source": "/github",
+        "destination": "https://github.com/sigurdarson"
+      },
+      {
+        "source": "/linkedin",
+        "destination": "https://www.linkedin.com/in/sigurdarson/"
+      },
+      {
+        "source": "/youtube",
+        "destination": "https://www.youtube.com/user/gunnaredits"
+      },
+      {
+        "source": "/instagram",
+        "destination": "https://www.instagram.com/gsigurdarson/"
+      },
+      {
+        "source": "/resume",
+        "destination": "https://sigurdarson.notion.site/Resume-Gunnar-Sigur-arson-a223fafa7f1140a99547780c03ac9700"
+      }
+    ]
+  }
