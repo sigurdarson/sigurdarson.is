@@ -28,10 +28,16 @@ export default async (req, res) => {
     }
   ).then((res) => res.json());
 
+  if (response.status === 400 && response.title === 'Member Exists') {
+    return res.status(400).json({
+      error: null,
+    });
+  }
+
   if (response.status >= 400) {
     return res.status(400).json({
       error:
-        "Hm, something is not working correctly - email me directly to addme@sigurdarson.is and you'll be added to the list.",
+        "Hm, something is not working correctly. Email me directly to addme@sigurdarson.is and you'll be added to the list.",
     });
   }
 
