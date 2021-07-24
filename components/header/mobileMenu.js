@@ -3,8 +3,6 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { Send } from 'react-feather';
 
-import colors from '../../config/colors';
-
 //Styled Components
 const MobileMenuWrapper = styled.div`
   position: fixed;

@@ -5,8 +5,6 @@ import { Menu } from 'react-feather';
 
 import Overlay from './mobileMenu';
 
-import colors from '../../config/colors';
-
 //Styled Components
 const HeaderWrapper = styled.header`
   width: 100%;
@@ -157,7 +155,7 @@ class Header extends Component {
               </Logo>
             </Link>
             <MobileIcon onClick={this.overlayToggleClickHandler}>
-              <p>Menu</p> <Menu size='20' color={colors.white} />
+              <p>Menu</p> <Menu size='20' color='white' />
             </MobileIcon>
             <MenuList>
               <MenuItem>
