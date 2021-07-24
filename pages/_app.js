@@ -105,6 +105,9 @@ export default function App({ Component, pageProps }) {
     };
   }, [router]);
 
+  //Hide Components on 404 page
+  const showComponent = router.pathname === '/404' ? false : true;
+
   return (
     <>
       <Head>
@@ -131,9 +134,9 @@ export default function App({ Component, pageProps }) {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <DefaultSeo {...SEO} />
-        <Header />
+        {showComponent && <Header />}
         <Component {...pageProps} />
-        <Newsletter />
+        {showComponent && <Newsletter />}
       </ThemeProvider>
     </>
   );

@@ -1,8 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import colors from '../../config/colors';
-
 //Styled Components
 const NewsletterContainer = styled.div`
   margin-top: 96px;
@@ -95,7 +93,7 @@ const Button = styled.button`
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
   &:hover {
-    background: ${colors.mainHigh};
+    opacity: 0.72;
   }
 `;
 

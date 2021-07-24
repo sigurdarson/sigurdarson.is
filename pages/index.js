@@ -65,6 +65,13 @@ const StartProject = styled.a`
   color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   text-decoration: none;
+  transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.76;
+  }
 `;
 
 const HeroArt = styled.div`

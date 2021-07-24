@@ -18,6 +18,10 @@ build
 # eslint caches
 .caches
 
+#.env
+.env
+.env.local
+
 # codecov token
 .cc_token
 
