@@ -21,11 +21,11 @@ const Ufo = styled.a`
 `;
 
 const Info = styled.p`
-  opacity: 0.25;
   position: absolute;
-  bottom: 50px;
-  left: 50px;
-  font-weight: 600;
+  bottom: 48px;
+  left: 48px;
+  font-size: 16px;
+  color: ${({ theme }) => theme.colors.paragraph};
 `;
 
 export default function FourOhFour() {

@@ -81,12 +81,12 @@ export default function MobileMenu(props) {
         </MenuItem>
         <MenuItem onClick={props.click}>
           <Link href='/about'>
-            <MenuLink>About</MenuLink>
+            <MenuLink>About me</MenuLink>
           </Link>
         </MenuItem>
         <MenuItem onClick={props.click}>
           <Link href='/photography'>
-            <MenuLink>Photography</MenuLink>
+            <MenuLink>Darkroom</MenuLink>
           </Link>
         </MenuItem>
         <MenuItem onClick={props.click}>
@@ -94,7 +94,7 @@ export default function MobileMenu(props) {
             <Contact>
               Let's talk
               <span>
-                <Send size='20' color={colors.main} />
+                <Send size='20' color='rgb(71, 118, 255)' />
               </span>
             </Contact>
           </Link>
