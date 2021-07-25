@@ -4,7 +4,7 @@ import styled from 'styled-components';
 //Styled Components
 const NewsletterContainer = styled.div`
   margin-top: 96px;
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     margin: 48px 24px 0 24px;
   }
 `;
@@ -48,7 +48,7 @@ const Input = styled.input`
   height: 40px;
   background: ${({ theme }) => theme.colors.background};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  padding: 10px 20px;
+  padding: 10px 16px;
   margin: 0;
   border-radius: 6px;
   outline: none;

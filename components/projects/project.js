@@ -17,6 +17,10 @@ const Project = styled.div`
   &:hover {
     background: ${({ theme }) => theme.colors.panelHover};
   }
+
+  @media (max-width: 992px) {
+    padding: 24px 0 0 24px;
+  }
 `;
 
 const Company = styled.p`

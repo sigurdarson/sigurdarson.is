@@ -3,6 +3,10 @@ import styled from 'styled-components';
 //Styled Components
 const PhotoContainer = styled.div`
   margin-bottom: 48px;
+
+  @media (max-width: 992px) {
+    margin-bottom: 24px;
+  }
 `;
 
 const Container = styled.div`

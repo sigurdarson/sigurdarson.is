@@ -5,8 +5,8 @@ import Photo from './photo';
 
 //Styled Components
 const Wrapper = styled.div`
-  max-width: 1000px;
-  margin: 100px auto;
+  max-width: 1200px;
+  margin: 48px auto;
 `;
 
 export default function photo(props) {

@@ -56,6 +56,13 @@ const Description = styled.p`
 
   a {
     text-decoration: underline;
+    transition: color 0.2s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.white};
+    }
   }
 `;
 

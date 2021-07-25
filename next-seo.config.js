@@ -14,7 +14,7 @@ const SEO = {
     description,
     images: [
       {
-        url: 'https://sigurdarson.is/img/social.png',
+        url: 'https://sigurdarson.is/img/social_image.png',
         alt: title,
         width: 1200,
         height: 630,

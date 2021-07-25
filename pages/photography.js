@@ -5,6 +5,7 @@ import { NextSeo } from 'next-seo';
 
 //Components
 import Photography from '../components/photography/photography';
+import PageTitle from '../components/pagetitle/pagetitle';
 
 //Styled Components
 const Wrapper = styled.main`
@@ -21,10 +22,15 @@ const SEO = {
   },
 };
 
-const AboutPage = () => (
+const PhotographyPage = () => (
   <>
     <NextSeo {...SEO} />
     <Wrapper>
+      <PageTitle
+        title='Darkroom'
+        extra='(Photography)'
+        description='In my free time I like to take photographs that includes everything from nature, people or tech. All images are free to download from Unsplash.'
+      />
       <Photography />
     </Wrapper>
   </>
@@ -40,4 +46,4 @@ export async function getServerSideProps() {
   };
 }
 
-export default AboutPage;
+export default PhotographyPage;
