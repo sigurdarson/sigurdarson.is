@@ -166,7 +166,7 @@ export default function HeroHome() {
               a Webflow agency.
             </Description>
             <StartProject href='mailto:hello@sigurdarson.is'>
-              Start a project ⟶
+              Start a project &rarr;
             </StartProject>
           </HeroContent>
           <HeroArt>

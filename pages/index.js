@@ -31,6 +31,7 @@ const About = styled.div`
     grid-template-columns: 1fr;
     margin: 0 auto 24px auto;
     padding: 24px;
+    grid-gap: 24px;
   }
 `;
 
@@ -84,7 +85,7 @@ export default function Home() {
               I’m constantly learning and looking for new experiences to grow
               both as a professional and as a human being.
             </p>
-            <Link href='/about'>find out more about me ⟶</Link>
+            <Link href='/about'>find out more about me &rarr;</Link>
           </AboutContent>
           <img src='/img/portrait.jpeg' />
         </About>
