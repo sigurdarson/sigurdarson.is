@@ -3,7 +3,7 @@
     "trailingSlash": false,
     "headers": [
       {
-        "source": "/fonts/Gilroy-SemiBold.otf",
+        "source": "/fonts/Epilogue-Medium.ttf",
         "headers": [
           {
             "key": "Cache-Control",
@@ -12,7 +12,7 @@
         ]
       },
       {
-        "source": "/fonts/Gilroy-Medium.otf",
+        "source": "/fonts/Epilogue-Regular.ttf",
         "headers": [
           {
             "key": "Cache-Control",

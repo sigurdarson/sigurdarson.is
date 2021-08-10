@@ -54,10 +54,6 @@ export default function photo(props) {
         link='https://unsplash.com/photos/l-EssfCmQ_s'
       />
       <Photo
-        image='https://images.unsplash.com/photo-1547489401-fcada4966052?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80'
-        link='https://unsplash.com/photos/l-EssfCmQ_s'
-      />
-      <Photo
         image='https://images.unsplash.com/photo-1547755280-3171f5e75218?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80'
         link='https://unsplash.com/photos/1CTzgELAetQ'
       />

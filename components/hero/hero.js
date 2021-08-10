@@ -19,7 +19,6 @@ const HeroContainer = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 60% 40%;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
@@ -35,7 +34,7 @@ const Title = styled.h1`
   font-size: 48px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.white};
-  line-height: 1.5;
+  line-height: 1.4;
   margin-bottom: 12px;
 
   @media (max-width: 1092px) {
@@ -48,8 +47,9 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
   color: ${({ theme }) => theme.colors.paragraph};
   margin-bottom: 24px;
   max-width: 450px;
@@ -57,8 +57,8 @@ const Description = styled.p`
   a {
     text-decoration: underline;
     transition: color 0.2s ease;
-    -webkit-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
 
     &:hover {
       color: ${({ theme }) => theme.colors.white};
@@ -66,82 +66,14 @@ const Description = styled.p`
   }
 `;
 
-const StartProject = styled.a`
-  font-size: 18px;
-  line-height: 1.5;
-  color: ${({ theme }) => theme.colors.white};
-  cursor: pointer;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-
-  &:hover {
-    opacity: 0.76;
-  }
-`;
-
 const HeroArt = styled.div`
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
 
   @media (max-width: 992px) {
     display: none;
-  }
-`;
-
-const HeroLinksContainer = styled.section`
-  padding: 48px 0;
-
-  @media (max-width: 992px) {
-    padding: 24px 0;
-  }
-`;
-
-const HeroLinks = styled.div`
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 24px;
-  margin: 0 auto;
-
-  @media (max-width: 1092px) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (max-width: 992px) {
-    grid-template-columns: 1fr;
-    grid-gap: 12px;
-  }
-`;
-
-const HeroLinkItem = styled.a`
-  padding: 20px;
-  background: ${({ theme }) => theme.colors.panel};
-  border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 12px;
-  transition: background 0.2s ease;
-  -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
-  display: flex;
-  align-items: center;
-
-  &:hover {
-    background: ${({ theme }) => theme.colors.panelHover};
-  }
-
-  div {
-    margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  p {
-    font-size: 16px;
-    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -165,9 +97,6 @@ export default function HeroHome() {
               </a>{' '}
               a Webflow agency.
             </Description>
-            <StartProject href='mailto:hello@sigurdarson.is'>
-              Start a project &rarr;
-            </StartProject>
           </HeroContent>
           <HeroArt>
             <svg
@@ -230,34 +159,6 @@ export default function HeroHome() {
           </HeroArt>
         </HeroContainer>
       </Hero>
-      <HeroLinksContainer>
-        <HeroLinks>
-          <HeroLinkItem href='/resume' target='_blank'>
-            <div>
-              <FileText size='20' color='#9FA2AF' />
-            </div>
-            <p>Resume</p>
-          </HeroLinkItem>
-          <HeroLinkItem href='mailto:hello@sigurdarson.is' target='_blank'>
-            <div>
-              <Mail size='20' color='#9FA2AF' />
-            </div>
-            <p>Email</p>
-          </HeroLinkItem>
-          <HeroLinkItem href='/dribbble' target='_blank'>
-            <div>
-              <Dribbble size='20' color='#9FA2AF' />
-            </div>
-            <p>Dribbble</p>
-          </HeroLinkItem>
-          <HeroLinkItem href='/linkedin' target='_blank'>
-            <div>
-              <Linkedin size='20' color='#9FA2AF' />
-            </div>
-            <p>LinkedIn</p>
-          </HeroLinkItem>
-        </HeroLinks>
-      </HeroLinksContainer>
     </>
   );
 }
