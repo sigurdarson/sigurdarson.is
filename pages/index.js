@@ -14,7 +14,7 @@ const About = styled.div`
   position: relative;
   padding: 48px;
   max-width: 1200px;
-  margin: 0 auto 48px auto;
+  margin: 48px auto 48px auto;
   border-radius: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -74,6 +74,8 @@ export default function Home() {
     <>
       <Wrapper>
         <Hero />
+
+        <Projects />
         <About>
           <AboutContent>
             <h3>About me</h3>
@@ -89,7 +91,6 @@ export default function Home() {
           </AboutContent>
           <img src='/img/portrait.jpeg' />
         </About>
-        <Projects />
       </Wrapper>
     </>
   );

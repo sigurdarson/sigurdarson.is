@@ -10,7 +10,7 @@ const NewsletterContainer = styled.div`
 `;
 
 const NewsletterDefault = styled.div`
-  padding: 35px;
+  padding: 32px;
   background: ${({ theme }) => theme.colors.panel};
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 12px;
@@ -20,14 +20,14 @@ const NewsletterDefault = styled.div`
 
 const Title = styled.h2`
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.white};
 `;
 
 const Description = styled.p`
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: ${({ theme }) => theme.colors.paragraph};
 `;
 
@@ -52,7 +52,7 @@ const Input = styled.input`
   margin: 0;
   border-radius: 6px;
   outline: none;
-  font-family: 'Gilroy', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: ${({ theme }) => theme.colors.paragraph};
@@ -111,8 +111,7 @@ const ButtonText = styled.span`
   text-align: center;
   font-weight: 400;
   font-size: 14px;
-  margin-top: -3px;
-  font-family: 'Gilroy', sans-serif;
+  font-family: 'Epilogue', sans-serif;
 `;
 
 const Error = styled.div`

@@ -16,18 +16,18 @@ import Footer from '../components/footer/footer';
 const GlobalStyle = createGlobalStyle`
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Epilogue';
   font-style: normal;
   font-weight: 500;
-  src: url(/fonts/Gilroy-SemiBold.otf);
+  src: url(/fonts/Epilogue-Medium.ttf);
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Epilogue';
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/Gilroy-Medium.otf);
+  src: url(/fonts/Epilogue-Regular.ttf);
   font-display: swap;
 }
 
@@ -35,8 +35,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     background: #09090b;
+  }
+
+  p {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
   }
 
   a {

@@ -10,7 +10,7 @@ const PageTitle = styled.section`
     font-size: 48px;
     font-weight: 400;
     color: ${({ theme }) => theme.colors.white};
-    line-height: 1.5;
+    line-height: 1.4;
     margin-bottom: 12px;
 
     @media (max-width: 1092px) {
@@ -31,8 +31,7 @@ const PageTitle = styled.section`
   }
 
   p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 16px;
     color: ${({ theme }) => theme.colors.paragraph};
     max-width: 450px;
   }

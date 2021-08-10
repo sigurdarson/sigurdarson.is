@@ -20,7 +20,6 @@ const AboutSection = styled.section`
 
   p {
     font-size: 18px;
-    line-height: 1.5;
     color: ${({ theme }) => theme.colors.paragraph};
   }
 

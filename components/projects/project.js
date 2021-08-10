@@ -11,8 +11,8 @@ const Project = styled.div`
   overflow: hidden;
   cursor: pointer;
   transition: background 0.2s ease;
-  -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
 
   &:hover {
     background: ${({ theme }) => theme.colors.panelHover};
@@ -24,8 +24,8 @@ const Project = styled.div`
 `;
 
 const Company = styled.p`
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
   margin-bottom: 12px;
   color: ${({ theme }) => theme.colors.paragraph};
 `;

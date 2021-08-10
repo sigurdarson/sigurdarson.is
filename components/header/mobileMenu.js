@@ -5,17 +5,26 @@ import { Send } from 'react-feather';
 
 //Styled Components
 const MobileMenuWrapper = styled.div`
-  position: fixed;
+  position: absolute;
   z-index: 99999999;
-  top: 100px;
-  left: 24px;
-  right: 24px;
+  top: 68px;
+  right: 0;
+  width: 272px;
   display: flex;
   text-align: center;
   background: ${({ theme }) => theme.colors.panel};
   padding: 12px;
   border-radius: 12px;
   border: 1px solid ${({ theme }) => theme.colors.border};
+
+  @media (max-width: 992px) {
+    position: fixed;
+    top: 100px;
+    left: 24px;
+    right: 24px;
+    max-width: 100%;
+    width: calc(100% - 48px);
+  }
 `;
 
 const MenuList = styled.ul`
@@ -90,13 +99,13 @@ export default function MobileMenu(props) {
           </Link>
         </MenuItem>
         <MenuItem onClick={props.click}>
+          <Link href='/resume.pdf'>
+            <MenuLink>Resume</MenuLink>
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={props.click}>
           <Link href='mailto:hello@sigurdarson.is'>
-            <Contact>
-              Let's talk
-              <span>
-                <Send size='20' color='rgb(71, 118, 255)' />
-              </span>
-            </Contact>
+            <Contact>Available for hire</Contact>
           </Link>
         </MenuItem>
       </MenuList>
