@@ -99,7 +99,7 @@ export default function MobileMenu(props) {
           </Link>
         </MenuItem>
         <MenuItem onClick={props.click}>
-          <Link href='/resume.pdf'>
+          <Link href='/resume.pdf' target='_blank'>
             <MenuLink>Resume</MenuLink>
           </Link>
         </MenuItem>
