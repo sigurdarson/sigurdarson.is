@@ -19,7 +19,7 @@ const AboutSection = styled.section`
   grid-gap: 48px;
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     color: ${({ theme }) => theme.colors.paragraph};
   }
 
