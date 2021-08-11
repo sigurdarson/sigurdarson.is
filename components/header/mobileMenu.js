@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Send } from 'react-feather';
 
 //Styled Components
 const MobileMenuWrapper = styled.div`
@@ -49,7 +48,6 @@ const MenuLink = styled.a`
   -webkit-transition: background 0.2s ease;
   -moz-transition: background 0.2s ease;
   cursor: pointer;
-  font-weight: 500;
 
   &:hover {
     background: ${({ theme }) => theme.colors.panelHover};
@@ -58,7 +56,6 @@ const MenuLink = styled.a`
 
 const Contact = styled.a`
   height: 40px;
-  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
