@@ -48,7 +48,7 @@
       },
       {
         "source": "/resume",
-        "destination": "https://sigurdarson.notion.site/Resume-Gunnar-Sigur-arson-a223fafa7f1140a99547780c03ac9700"
+        "destination": "/resume.pdf"
       }
     ]
   }
