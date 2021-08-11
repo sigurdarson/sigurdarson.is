@@ -85,9 +85,6 @@ const SEO = {
 };
 
 export default function NotesPage({ notes }) {
-  console.log(notes);
-  //const showImage = notes.cover_image === 'no' ? false : true;
-
   return (
     <>
       <NextSeo {...SEO} />

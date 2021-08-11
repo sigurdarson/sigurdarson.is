@@ -107,7 +107,7 @@ const Content = styled.div`
     line-height: 1.6;
     color: ${({ theme }) => theme.colors.paragraph};
     border: 1px solid ${({ theme }) => theme.colors.border};
-    background: #9fa2af24;
+    background: ${({ theme }) => theme.colors.panel};
   }
 `;
 
