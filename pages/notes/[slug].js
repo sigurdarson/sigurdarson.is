@@ -20,6 +20,7 @@ const NotesSection = styled.section`
     font-weight: 400;
     color: ${({ theme }) => theme.colors.white};
     margin-bottom: 48px;
+    line-height: 1.4;
   }
 
   p {
@@ -122,13 +123,33 @@ const SEO = {
 };
 
 export default function NotePage({
-  frontmatter: { title, date, cover_image },
+  frontmatter: { title, excerpt, date, cover_image },
   slug,
   content,
 }) {
   return (
     <>
-      <NextSeo {...SEO} />
+      <NextSeo
+        {...SEO}
+        title={`${title} — Notes - Sigurdarson`}
+        description={excerpt}
+        canonical={'https://sigurdarson.is/notes/' + `${slug}`}
+        openGraph={{
+          title: `${title} — Notes - Sigurdarson`,
+          url: 'https://sigurdarson.is/notes/' + `${slug}`,
+          description: `${excerpt}`,
+          images: [
+            {
+              url: 'https://sigurdarson.is/notes' + `${cover_image}`,
+              alt: `${title}`,
+            },
+          ],
+          site_name: 'Notes',
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+      />
       <Wrapper>
         <NotesSection>
           <Link href='/notes'>
