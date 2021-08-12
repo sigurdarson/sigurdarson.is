@@ -120,13 +120,13 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link
           rel='preload'
-          href='/fonts/Gilroy-SemiBold.otf'
+          href='/fonts/Epilogue-Regular.ttf'
           as='font'
           crossOrigin='anonymous'
         />
         <link
           rel='preload'
-          href='/fonts/Gilroy-Medium.otf'
+          href='/fonts/Epilogue-Medium.ttf'
           as='font'
           crossOrigin='anonymous'
         />
