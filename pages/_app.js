@@ -84,7 +84,7 @@ const theme = {
 
 export default function App({ Component, pageProps }) {
   // Load Panelbear only once during the app lifecycle
-  usePanelbear(process.env.YOUR_SITE_ID, {
+  usePanelbear('4fViUKpIdpF', {
     // Uncomment to allow sending events on localhost, and log to console too.
     // debug: true
   });
