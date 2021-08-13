@@ -29,6 +29,10 @@ const NotesSection = styled.section`
       color: ${({ theme }) => theme.colors.white};
     }
   }
+
+  @media (max-width: 992px) {
+    margin: 96px auto 0 auto;
+  }
 `;
 
 const Note = styled.div`
@@ -51,13 +55,15 @@ const Note = styled.div`
     object-fit: cover;
     margin-bottom: 24px;
     border-radius: 6px;
+    
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 24px;
     color: ${({ theme }) => theme.colors.white};
     font-weight: 400;
     margin-bottom: 12px;
+    line-height: 1.4;
   }
 
   p {
@@ -71,6 +77,12 @@ const Note = styled.div`
     font-size: 16px;
     color: ${({ theme }) => theme.colors.white};
     font-weight: 400;
+  }
+
+  @media (max-width: 992px) {
+    img {
+      height: 196px;
+    }
   }
 `;
 
