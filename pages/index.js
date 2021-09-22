@@ -29,7 +29,7 @@ const About = styled.div`
 
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
-    margin: 0 auto 24px auto;
+    margin: 24px auto 24px auto;
     padding: 24px;
     grid-gap: 24px;
   }
