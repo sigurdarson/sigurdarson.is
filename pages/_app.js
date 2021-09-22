@@ -83,7 +83,6 @@ const theme = {
 };
 
 export default function App({ Component, pageProps }) {
-  
 
   //Page loader
   const router = useRouter();

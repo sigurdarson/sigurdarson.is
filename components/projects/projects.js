@@ -24,7 +24,7 @@ export default function ProjectsComponent() {
       <Link href='#'>
         <Project
           company='Bedoo (Coming Soon)'
-          title='A better way to manage your projects.'
+          title='A better way to manage everyday tasks.'
           image='/img/projects/bedoo/bedoo_cover.png'
         />
       </Link>
