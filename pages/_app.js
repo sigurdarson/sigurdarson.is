@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import NProgress from 'nprogress';
-import { usePanelbear } from './../hooks/panelbear';
+import * as Fathom from 'fathom-client';
 import { DefaultSeo } from 'next-seo';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
@@ -83,14 +83,31 @@ const theme = {
 };
 
 export default function App({ Component, pageProps }) {
-  // Load Panelbear only once during the app lifecycle
-  usePanelbear('4fViUKpIdpF', {
-    // Uncomment to allow sending events on localhost, and log to console too.
-    // debug: true
-  });
 
   //Page loader
   const router = useRouter();
+
+  useEffect(() => {
+    // Initialize Fathom when the app loads
+    // Example: yourdomain.com
+    //  - Do not include https://
+    //  - This must be an exact match of your domain.
+    //  - If you're using www. for your domain, make sure you include that here.
+    Fathom.load('XUSIOUXD', {
+      includedDomains: ['sigurdarson.is'],
+    });
+
+    function onRouteChangeComplete() {
+      Fathom.trackPageview();
+    }
+    // Record a pageview when route changes
+    router.events.on('routeChangeComplete', onRouteChangeComplete);
+
+    // Unassign event listener
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete);
+    };
+  }, []);
 
   useEffect(() => {
     const handleStart = (url) => {
