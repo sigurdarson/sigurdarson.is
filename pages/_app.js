@@ -95,6 +95,7 @@ export default function App({ Component, pageProps }) {
     //  - If you're using www. for your domain, make sure you include that here.
     Fathom.load('XUSIOUXD', {
       includedDomains: ['sigurdarson.is'],
+      url: 'https://basilisk.Sigurdarson.is/script.js',
     });
 
     function onRouteChangeComplete() {
