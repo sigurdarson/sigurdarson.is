@@ -53,6 +53,7 @@ const TeamTitle = styled.p`
 const TeamMember = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 16px;
 
   div {
     width: 24px;
@@ -87,22 +88,26 @@ const TeamLink = styled.a`
   }
 `;
 
-export default function ProjectComponent(props) {
+export default function ProjectTwoComponent(props) {
   return (
     <Project>
       <ExternalLink href={props.link} target="_blank">
         {props.company}
         <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
       </ExternalLink>
-
       <Description>{props.description}</Description>
       <TeamTitle>Team:</TeamTitle>
       <TeamMember>
         <div></div>
-
         <TeamLink href={props.personLink} target="_blank">
           {props.personName}
           <img src="/img/arrow-up-right-white.svg" alt="Arrow up right" />
+        </TeamLink>
+      </TeamMember>
+      <TeamMember>
+        <div></div>
+        <TeamLink href={props.personTwoLink} target="_blank">
+          {props.personTwoName}
         </TeamLink>
       </TeamMember>
     </Project>
