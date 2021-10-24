@@ -47,7 +47,7 @@ export default function ProjectsComponent() {
       <ProjectTwo
         link="https://getachoo.com"
         company="Achoo"
-        description="Alessa's vision is to be the leading debt collection company when it comes to debt created as a result of online copyright infringement"
+        description="Reach your specific target audiences more effectively and authentically in less time and costs with Achoo’s powerful influencer platform."
         personLink="https://www.linkedin.com/in/rasmusdnielsen/"
         personName="Rasmus D. Nielsen"
         personTwoLink="#"
