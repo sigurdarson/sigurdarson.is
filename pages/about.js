@@ -72,14 +72,20 @@ export default function AboutPage() {
         <AboutSection>
           <AboutImage />
           <p>
-            Currently I'm the design lead at <a href="#">Copyright Agent</a>{" "}
+            Currently I'm the design lead at{" "}
+            <a href="https://copyrightagent.com" target="_blank">
+              Copyright Agent
+            </a>{" "}
             where we work towards a cleaner internet where copyrighted material
             both in image and text, truly lies in the hand of the original
             creator. At Copyright Agent we work with a few of the largest image
             providers in the world like Reuters, Ritzau Scanpix, AFP, and NTB.
             <br />
             <br />
-            Before Copyright Agent I was working at <a href="#">Achoo</a>{" "}
+            Before Copyright Agent I was working at{" "}
+            <a href="https://getachoo.com" target="_blank">
+              Achoo
+            </a>{" "}
             building a new way for businesses to connect with, and invite
             influencers to join marketing campaigns.
             <br />
@@ -96,8 +102,12 @@ export default function AboutPage() {
             , a place where you can take control of your data and your privacy!
             <br />
             <br />
-            You can find me on <a href="#">Twitter</a> where I mostly repost
-            interesting things about design, blockchain, and cats.
+            You can find me on{" "}
+            <a href="/twitter" target="_blank">
+              Twitter
+            </a>{" "}
+            where I mostly repost interesting things about design, blockchain,
+            and cats.
           </p>
         </AboutSection>
       </Wrapper>
