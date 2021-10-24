@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 //Styled Components
 const PageTitle = styled.section`
@@ -7,23 +7,15 @@ const PageTitle = styled.section`
   margin: 0 auto;
 
   h1 {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 400;
     color: ${({ theme }) => theme.colors.white};
-    line-height: 1.4;
+    line-height: 1.5;
     margin-bottom: 12px;
-
-    @media (max-width: 1092px) {
-      font-size: 40px;
-    }
-
-    @media (max-width: 992px) {
-      font-size: 32px;
-    }
   }
 
   span {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     color: ${({ theme }) => theme.colors.paragraph};
     line-height: 1.5;
@@ -33,7 +25,7 @@ const PageTitle = styled.section`
   p {
     font-size: 16px;
     color: ${({ theme }) => theme.colors.paragraph};
-    max-width: 450px;
+    max-width: 448px;
   }
 
   @media (max-width: 1092px) {

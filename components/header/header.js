@@ -1,9 +1,6 @@
-import React, { Component } from 'react';
-import Link from 'next/link';
-import styled from 'styled-components';
-import { Menu } from 'react-feather';
-
-import Overlay from './mobileMenu';
+import React, { Component } from "react";
+import Link from "next/link";
+import styled from "styled-components";
 
 //Styled Components
 const HeaderWrapper = styled.header`
@@ -12,7 +9,6 @@ const HeaderWrapper = styled.header`
   background-color: rgba(9, 9, 11, 0.76);
   backdrop-filter: saturate(100%) blur(48px);
   -webkit-backdrop-filter: saturate(100%) blur(48px);
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   z-index: 99;
   position: sticky;
   top: 0;
@@ -60,7 +56,6 @@ const MenuList = styled.ul`
 const ListItem = styled.li`
   display: flex;
   align-items: center;
-  margin-right: 18px;
 
   p {
     font-size: 14px;
@@ -83,75 +78,47 @@ const ListItem = styled.li`
   }
 `;
 
-const MobileIcon = styled.div`
-  cursor: pointer;
-  border-radius: 4px;
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background 0.2s ease;
-  -webkit-transition: background 0.2s ease;
-  -moz-transition: background 0.2s ease;
-  transform: translateX(8px);
+const MobileContact = styled.li`
+  display: none;
 
-  &:hover {
-    background: #9fa2af12;
+  a {
+    color: ${({ theme }) => theme.colors.paragraph};
+    transition: opacity 0.2s ease;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.72;
+    }
+  }
+
+  @media (max-width: 992px) {
+    display: block;
   }
 `;
 
-class Header extends Component {
-  state = {
-    overlayOpen: false,
-  };
+export default function Header() {
+  return (
+    <HeaderWrapper>
+      <HeaderContainer>
+        <Link href="/">
+          <Logo>
+            <p>Gunnar Sigurðarson</p>
+          </Logo>
+        </Link>
+        <MenuList>
+          <ListItem>
+            <p>
+              Let's talk —{" "}
+              <a href="mailto:hello@sigurdarson.is">hello@sigurdarson.is</a>
+            </p>
+          </ListItem>
 
-  overlayToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return { overlayOpen: !prevState.overlayOpen };
-    });
-  };
-
-  overlayCloseHandler = () => {
-    this.setState({ overlayOpen: false });
-  };
-  overlayCloseIconHandler = () => {
-    this.setState({ overlayOpen: false });
-  };
-
-  render() {
-    let overlay;
-
-    if (this.state.overlayOpen) {
-      overlay = <Overlay click={this.overlayCloseHandler} />;
-    }
-
-    return (
-      <>
-        <HeaderWrapper>
-          <HeaderContainer>
-            <Link href='/'>
-              <Logo>
-                <p>Gunnar Sigurðarson</p>
-              </Logo>
-            </Link>
-            <MenuList>
-              <ListItem>
-                <p>
-                  Let's talk —{' '}
-                  <a href='mailto:hello@sigurdarson.is'>hello@sigurdarson.is</a>
-                </p>
-              </ListItem>
-              <MobileIcon onClick={this.overlayToggleClickHandler}>
-                <Menu size='20' color='white' />
-              </MobileIcon>
-            </MenuList>
-            {overlay}
-          </HeaderContainer>
-        </HeaderWrapper>
-      </>
-    );
-  }
+          <MobileContact>
+            <a href="mailto:hello@sigurdarson.is">Let's talk</a>
+          </MobileContact>
+        </MenuList>
+      </HeaderContainer>
+    </HeaderWrapper>
+  );
 }
-
-export default Header;

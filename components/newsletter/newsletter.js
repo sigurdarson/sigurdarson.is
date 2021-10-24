@@ -1,5 +1,5 @@
-import * as React from 'react';
-import styled from 'styled-components';
+import * as React from "react";
+import styled from "styled-components";
 
 //Styled Components
 const NewsletterContainer = styled.div`
@@ -52,9 +52,9 @@ const Input = styled.input`
   margin: 0;
   border-radius: 6px;
   outline: none;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   color: ${({ theme }) => theme.colors.paragraph};
   -webkit-appearance: none;
   transition: border 0.3s ease;
@@ -80,7 +80,7 @@ const Input = styled.input`
 `;
 
 const Spacer = styled.div`
-  width: 12px;
+  width: 16px;
   @media (max-width: 992px) {
     display: none;
   }
@@ -95,14 +95,14 @@ const Button = styled.button`
   height: 40px;
   padding-left: 24px;
   padding-right: 24px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
 
   &:hover {
-    background: #5d86ff;
+    background: #69b6f0;
   }
 `;
 
@@ -110,8 +110,8 @@ const ButtonText = styled.span`
   color: ${({ theme }) => theme.colors.white};
   text-align: center;
   font-weight: 400;
-  font-size: 14px;
-  font-family: 'Epilogue', sans-serif;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
 `;
 
 const Error = styled.div`
@@ -143,40 +143,40 @@ const SuccessText = styled.p`
 `;
 
 export default function Newsletter() {
-  const [email, setEmail] = React.useState('');
-  const [status, setStatus] = React.useState('pending');
-  const [errorMessage, setErrorMessage] = React.useState('');
+  const [email, setEmail] = React.useState("");
+  const [status, setStatus] = React.useState("pending");
+  const [errorMessage, setErrorMessage] = React.useState("");
 
   function onChange(e) {
-    if (status !== 'pending') setStatus('pending');
+    if (status !== "pending") setStatus("pending");
     return setEmail(e.target.value.trim());
   }
 
   async function submit(e) {
     e.preventDefault();
 
-    const res = await fetch('/api/newsletter', {
+    const res = await fetch("/api/newsletter", {
       body: JSON.stringify({ email }),
-      headers: { 'Content-Type': 'application/json' },
-      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
     });
 
     const { error } = await res.json();
 
     if (error) {
-      setStatus('error');
+      setStatus("error");
       setErrorMessage(error);
       return;
     }
 
-    setEmail('');
-    setStatus('succeeded');
-    panelbear('track', 'SignupForNewsletter');
+    setEmail("");
+    setStatus("succeeded");
+    panelbear("track", "SignupForNewsletter");
   }
 
   return (
-    <NewsletterContainer id='newsletter'>
-      {status === 'succeeded' ? (
+    <NewsletterContainer id="newsletter">
+      {status === "succeeded" ? (
         <Success>
           <SuccessText>Thank you! You've been subscribed.</SuccessText>
         </Success>
@@ -187,29 +187,30 @@ export default function Newsletter() {
             Get emails about design, development, and tech.
           </Description>
 
-          <Form name='newsletter' onSubmit={submit}>
-            <input type='hidden' name='form-name' value='newsletter' />
+          <Form name="newsletter" onSubmit={submit}>
+            <input type="hidden" name="form-name" value="newsletter" />
             <InputWrapper>
               <Input
                 value={email}
-                disabled={status === 'loading'}
+                disabled={status === "loading"}
                 onChange={onChange}
-                placeholder='Email address'
-                type='email'
-                name='email'
+                placeholder="Email address"
+                type="email"
+                name="email"
                 required
-                aria-label='Email for newsletter'
+                aria-label="Email for newsletter"
               />
             </InputWrapper>
             <Spacer />
             <Button
               onClick={submit}
-              disabled={status === 'submitting' || !email}
-              type='submit'>
-              <ButtonText>Subscribe ✌️</ButtonText>
+              disabled={status === "submitting" || !email}
+              type="submit"
+            >
+              <ButtonText>Subscribe</ButtonText>
             </Button>
           </Form>
-          {status === 'error' && (
+          {status === "error" && (
             <Error>
               <ErrorMsg>{errorMessage}</ErrorMsg>
             </Error>

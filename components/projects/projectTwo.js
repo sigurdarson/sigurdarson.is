@@ -53,6 +53,7 @@ const TeamTitle = styled.p`
 const TeamMember = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 16px;
 
   div {
     width: 24px;
@@ -87,7 +88,7 @@ const TeamLink = styled.a`
   }
 `;
 
-export default function ProjectComponent(props) {
+export default function ProjectTwoComponent(props) {
   return (
     <Project>
       <Link href={props.link}>
@@ -105,6 +106,12 @@ export default function ProjectComponent(props) {
             {props.personName}
             <img src="/img/arrow-up-right-white.svg" alt="Arrow up right" />
           </TeamLink>
+        </Link>
+      </TeamMember>
+      <TeamMember>
+        <div></div>
+        <Link href={props.personTwoLink}>
+          <TeamLink target="_blank">{props.personTwoName}</TeamLink>
         </Link>
       </TeamMember>
     </Project>

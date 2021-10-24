@@ -1,58 +1,65 @@
-import styled from 'styled-components';
-
-//Components
-import { Mail, FileText, Linkedin, Dribbble } from 'react-feather';
+import styled from "styled-components";
+import Link from "next/link";
 
 //Styled Compoenents
 const Hero = styled.section`
-  padding: 148px 0 0 0;
+  padding: 148px 0 148px 0;
   width: 100%;
 
   @media (max-width: 992px) {
-    padding: 96px 0 0 0;
+    padding: 96px 0 96px 0;
   }
 `;
 
 const HeroContainer = styled.div`
-  padding: 0 0 148px 0;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 96px;
+  position: relative;
 
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
-    padding: 0 0 96px 0;
+    grid-gap: 16px;
   }
 `;
 
-const HeroContent = styled.div`
-  width: 100%;
+const HeroContent = styled.div``;
+
+const HeroContentHigh = styled.div`
+  height: calc(100vh - 228px);
+  width: 1200px;
+  position: fixed;
+
+  pointer-events: none;
+
+  @media (max-width: 992px) {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.white};
-  line-height: 1.4;
-  margin-bottom: 12px;
-
-  @media (max-width: 1092px) {
-    font-size: 40px;
-  }
+  line-height: 1.5;
+  margin-bottom: 16px;
 
   @media (max-width: 992px) {
-    font-size: 32px;
+    font-size: 24px;
   }
 `;
 
 const Description = styled.p`
   font-size: 16px;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.5;
   color: ${({ theme }) => theme.colors.paragraph};
-  margin-bottom: 24px;
-  max-width: 450px;
+  margin-bottom: 16px;
+  max-width: 448px;
 
   a {
     text-decoration: underline;
@@ -66,14 +73,77 @@ const Description = styled.p`
   }
 `;
 
-const HeroArt = styled.div`
-  display: none;
-  justify-content: center;
+const SiteLink = styled.a`
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.primary};
+  display: flex;
   align-items: center;
-  width: 100%;
+  cursor: pointer;
+  pointer-events: auto;
+
+  img {
+    margin-left: 4px;
+    transform: translateX(0);
+    transition: transform 0.2s ease;
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    img {
+      transform: translateX(4px);
+    }
+  }
+`;
+
+const ExternalLink = styled.a`
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.primary};
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+
+  img {
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    img {
+      transform: translateX(4px) translateY(-4px);
+    }
+  }
+`;
+
+const Nav = styled.ul`
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 48px;
+  list-style: none;
 
   @media (max-width: 992px) {
-    display: none;
+    position: relative;
+    flex-direction: column;
+    bottom: 0;
+  }
+`;
+
+const NavItem = styled.li`
+  margin-left: 24px;
+
+  @media (max-width: 992px) {
+    margin-left: 0px;
+    margin-bottom: 16px;
   }
 `;
 
@@ -87,76 +157,62 @@ export default function HeroHome() {
               I focus on creating meaningful experiences through design.
             </Title>
             <Description>
-              Currently moving pixels at{' '}
-              <a href='https://copyrightagent.com' target='_blank'>
-                Copyright Agent
-              </a>{' '}
-              & <br /> Founder at{' '}
-              <a href='https://brandy.is' target='_blank'>
-                Studio Brandy
-              </a>{' '}
-              a Webflow agency.
+              Hey!‏‏‎ ‎I’m Gunnar, a product & brand designer, and a front-end
+              developer, currently located in Copenhagen, Denmark.
             </Description>
+            <Link href="/about">
+              <SiteLink>
+                More about me
+                <img src="/img/arrow-right.svg" alt="Arrow right" />
+              </SiteLink>
+            </Link>
           </HeroContent>
-          <HeroArt>
-            <svg
-              width='259'
-              height='345'
-              viewBox='0 0 259 345'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'>
-              <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
-                d='M86.167 86.1875C86.167 38.5875 124.745 8.66087e-05 172.334 0V86.1875L86.167 86.1875Z'
-                fill='#4776FF'
-              />
-              <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
-                d='M7.54021e-06 172.375C3.37587e-06 219.975 38.5782 258.563 86.1668 258.563L86.1668 172.375L7.54021e-06 172.375Z'
-                fill='#191920'
-              />
-              <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
-                d='M259 345L259 345L259 258.813L172.834 258.813C172.833 306.413 211.412 345 259 345Z'
-                fill='#191920'
-              />
-              <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
-                d='M172.334 86.1875C172.334 133.787 133.756 172.375 86.1673 172.375L86.1673 86.1875L172.334 86.1875Z'
-                fill='#191920'
-              />
-              <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
-                d='M0.000236511 86.1875H0L0 172.375L86.167 172.375C86.167 124.775 47.5888 86.1875 0.000236511 86.1875Z'
-                fill='#4776FF'
-              />
-              <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
-                d='M258.5 258.562C258.5 210.962 219.922 172.375 172.334 172.375L172.334 258.562L258.5 258.562Z'
-                fill='#4776FF'
-              />
-              <ellipse
-                cx='129'
-                cy='215.968'
-                rx='43.0834'
-                ry='43.0938'
-                fill='white'
-              />
-              <ellipse
-                cx='215.417'
-                cy='43.0938'
-                rx='43.0834'
-                ry='43.0938'
-                fill='white'
-              />
-            </svg>
-          </HeroArt>
+          <HeroContentHigh>
+            <Nav>
+              <NavItem>
+                <Link href="/notes">
+                  <SiteLink>
+                    Notes
+                    <img src="/img/arrow-right.svg" alt="Arrow right" />
+                  </SiteLink>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link href="/photography">
+                  <SiteLink>
+                    Darkroom
+                    <img src="/img/arrow-right.svg" alt="Arrow right" />
+                  </SiteLink>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link href="/twitter">
+                  <ExternalLink target="_blank">
+                    Twitter
+                    <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
+                  </ExternalLink>
+                </Link>
+              </NavItem>
+
+              <NavItem>
+                <Link href="/linkedin">
+                  <ExternalLink target="_blank">
+                    LinkedIn
+                    <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
+                  </ExternalLink>
+                </Link>
+              </NavItem>
+
+              <NavItem>
+                <Link href="/dribbble">
+                  <ExternalLink target="_blank">
+                    Dribbble
+                    <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
+                  </ExternalLink>
+                </Link>
+              </NavItem>
+            </Nav>
+          </HeroContentHigh>
         </HeroContainer>
       </Hero>
     </>
