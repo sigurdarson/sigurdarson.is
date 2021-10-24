@@ -186,30 +186,24 @@ export default function HeroHome() {
                 </Link>
               </NavItem>
               <NavItem>
-                <Link href="/twitter">
-                  <ExternalLink target="_blank">
-                    Twitter
-                    <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
-                  </ExternalLink>
-                </Link>
+                <ExternalLink href="/twitter" target="_blank">
+                  Twitter
+                  <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
+                </ExternalLink>
               </NavItem>
 
               <NavItem>
-                <Link href="/linkedin">
-                  <ExternalLink target="_blank">
-                    LinkedIn
-                    <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
-                  </ExternalLink>
-                </Link>
+                <ExternalLink href="/linkedin" target="_blank">
+                  LinkedIn
+                  <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
+                </ExternalLink>
               </NavItem>
 
               <NavItem>
-                <Link href="/dribbble">
-                  <ExternalLink target="_blank">
-                    Dribbble
-                    <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
-                  </ExternalLink>
-                </Link>
+                <ExternalLink href="/dribbble" target="_blank">
+                  Dribbble
+                  <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
+                </ExternalLink>
               </NavItem>
             </Nav>
           </HeroContentHigh>

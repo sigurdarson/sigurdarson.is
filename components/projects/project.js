@@ -90,22 +90,20 @@ const TeamLink = styled.a`
 export default function ProjectComponent(props) {
   return (
     <Project>
-      <Link href={props.link}>
-        <ExternalLink target="_blank">
-          {props.company}
-          <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
-        </ExternalLink>
-      </Link>
+      <ExternalLink href={props.link} target="_blank">
+        {props.company}
+        <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
+      </ExternalLink>
+
       <Description>{props.description}</Description>
       <TeamTitle>Team:</TeamTitle>
       <TeamMember>
         <div></div>
-        <Link href={props.personLink}>
-          <TeamLink target="_blank">
-            {props.personName}
-            <img src="/img/arrow-up-right-white.svg" alt="Arrow up right" />
-          </TeamLink>
-        </Link>
+
+        <TeamLink href={props.personLink} target="_blank">
+          {props.personName}
+          <img src="/img/arrow-up-right-white.svg" alt="Arrow up right" />
+        </TeamLink>
       </TeamMember>
     </Project>
   );
