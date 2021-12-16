@@ -31,15 +31,6 @@ const GlobalStyle = createGlobalStyle`
   font-display: swap;
 }
 
-
-@font-face {
-  font-family: 'iA Writer Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: url(/fonts/iAWriterMonoS-Regular.woff);
-  font-display: swap;
-}
-
   body {
     margin: 0;
     padding: 0;
@@ -66,8 +57,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: rgb(71, 118, 255, 0.12);
-    color: rgb(71, 118, 255);
+    background: rgb(91, 82, 255, 0.12);
+    color: rgb(91, 82, 255);
   }
 `;
 
@@ -118,26 +109,6 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
-  useEffect(() => {
-    const handleStart = (url) => {
-      console.log(`Loading: ${url}`);
-      NProgress.start();
-    };
-    const handleStop = () => {
-      NProgress.done();
-    };
-
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleStop);
-    router.events.on("routeChangeError", handleStop);
-
-    return () => {
-      router.events.off("routeChangeStart", handleStart);
-      router.events.off("routeChangeComplete", handleStop);
-      router.events.off("routeChangeError", handleStop);
-    };
-  }, [router]);
-
   //Hide Components on 404 page
   const showComponent = router.pathname === "/404" ? false : true;
   const showNewsletter = router.pathname === ("/404" && "/") ? false : true;
@@ -147,13 +118,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link
           rel="preload"
-          href="/fonts/Inter-Medium.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Inter-Regular.ttf"
+          href="/fonts/iAWriterQuattroS-Regular.woff"
           as="font"
           crossOrigin="anonymous"
         />
@@ -162,8 +127,6 @@ export default function App({ Component, pageProps }) {
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛸</text></svg>"
         />
         <meta name="robots" content="follow, index" />
-        {/* Import CSS for nprogress */}
-        <link rel="stylesheet" type="text/css" href="/nprogress.css" />
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
