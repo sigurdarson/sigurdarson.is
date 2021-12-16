@@ -139,11 +139,17 @@ const Nav = styled.ul`
 `;
 
 const NavItem = styled.li`
-  margin-left: 24px;
+  margin-left: 8px;
+  padding: 8px;
+  background: ${({ theme }) => theme.colors.primary12};
+  border-radius: 6px;
 
   @media (max-width: 992px) {
     margin-left: 0px;
     margin-bottom: 16px;
+
+    padding: 0;
+    background: transparent;
   }
 `;
 

@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import { NextSeo } from 'next-seo';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import marked from 'marked';
-import Link from 'next/link';
+import styled from "styled-components";
+import { NextSeo } from "next-seo";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import marked from "marked";
+import Link from "next/link";
 
 const Wrapper = styled.main`
   padding: 0 24px;
@@ -69,7 +69,7 @@ const Content = styled.div`
     font-size: 16px;
     color: ${({ theme }) => theme.colors.paragraph};
     margin-bottom: 12px;
-    line-height: 1.6;
+    line-height: 1.8;
   }
 
   a {
@@ -113,12 +113,12 @@ const Content = styled.div`
 `;
 
 const SEO = {
-  title: 'Notes - Sigurdarson — Brand & Product Designer (UI/UX)',
-  canonical: 'https://sigurdarson.is/notes',
+  title: "Notes - Sigurdarson — Brand & Product Designer (UI/UX)",
+  canonical: "https://sigurdarson.is/notes",
 
   openGraph: {
-    url: 'https://sigurdarson.is/notes',
-    title: 'Notes - Sigurdarson — Brand & Product Designer (UI/UX)',
+    url: "https://sigurdarson.is/notes",
+    title: "Notes - Sigurdarson — Brand & Product Designer (UI/UX)",
   },
 };
 
@@ -133,32 +133,33 @@ export default function NotePage({
         {...SEO}
         title={`${title} — Notes - Sigurdarson`}
         description={excerpt}
-        canonical={'https://sigurdarson.is/notes/' + `${slug}`}
+        canonical={"https://sigurdarson.is/notes/" + `${slug}`}
         openGraph={{
           title: `${title} — Notes - Sigurdarson`,
-          url: 'https://sigurdarson.is/notes/' + `${slug}`,
+          url: "https://sigurdarson.is/notes/" + `${slug}`,
           description: `${excerpt}`,
           images: [
             {
-              url: 'https://sigurdarson.is/notes' + `${cover_image}`,
+              url: "https://sigurdarson.is/notes" + `${cover_image}`,
               alt: `${title}`,
             },
           ],
-          site_name: 'Notes',
+          site_name: "Notes",
         }}
         twitter={{
-          cardType: 'summary_large_image',
+          cardType: "summary_large_image",
         }}
       />
       <Wrapper>
         <NotesSection>
-          <Link href='/notes'>
+          <Link href="/notes">
             <a>&larr; Notes</a>
           </Link>
           <p>{date}</p>
           <h1>{title}</h1>
           <Content
-            dangerouslySetInnerHTML={{ __html: marked(content) }}></Content>
+            dangerouslySetInnerHTML={{ __html: marked(content) }}
+          ></Content>
         </NotesSection>
       </Wrapper>
     </>
@@ -166,11 +167,11 @@ export default function NotePage({
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('notes'));
+  const files = fs.readdirSync(path.join("notes"));
 
   const paths = files.map((filename) => ({
     params: {
-      slug: filename.replace('.md', ''),
+      slug: filename.replace(".md", ""),
     },
   }));
 
@@ -182,8 +183,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   const markdownWithMeta = fs.readFileSync(
-    path.join('notes', slug + '.md'),
-    'utf-8'
+    path.join("notes", slug + ".md"),
+    "utf-8"
   );
 
   const { data: frontmatter, content } = matter(markdownWithMeta);

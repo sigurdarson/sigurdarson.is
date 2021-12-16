@@ -13,7 +13,7 @@ const Projects = styled.div`
   h3 {
     font-size: 18px;
     font-weight: 400;
-    font-family: "Inter", sans-serif;
+    font-family: "iA Writer Quattro", sans-serif;
     color: ${({ theme }) => theme.colors.white};
     margin-bottom: 48px;
   }

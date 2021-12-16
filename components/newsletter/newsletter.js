@@ -52,7 +52,7 @@ const Input = styled.input`
   margin: 0;
   border-radius: 6px;
   outline: none;
-  font-family: "Inter", sans-serif;
+  font-family: "iA Writer Quattro", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: ${({ theme }) => theme.colors.paragraph};
@@ -97,12 +97,12 @@ const Button = styled.button`
   padding-right: 24px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
-  -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
+  transition: background 0.2s ease;
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
 
   &:hover {
-    background: #69b6f0;
+    background: rgb(91, 82, 255, 0.72);
   }
 `;
 
@@ -111,7 +111,7 @@ const ButtonText = styled.span`
   text-align: center;
   font-weight: 400;
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "iA Writer Quattro", sans-serif;
 `;
 
 const Error = styled.div`
