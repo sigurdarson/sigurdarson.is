@@ -22,28 +22,18 @@ const SEO = {
   },
 };
 
-const PhotographyPage = () => (
-  <>
-    <NextSeo {...SEO} />
-    <Wrapper>
-      <PageTitle
-        title="Darkroom"
-        extra="(Photography)"
-        description="In my free time I like to take photographs that includes everything from nature, people or tech."
-      />
-      <Photography />
-    </Wrapper>
-  </>
-);
-
-export async function getServerSideProps() {
-  await new Promise((resolve) => {
-    setTimeout(resolve, 0);
-  });
-
-  return {
-    props: {},
-  };
+export default function PhotographyPage() {
+  return (
+    <>
+      <NextSeo {...SEO} />
+      <Wrapper>
+        <PageTitle
+          title="Darkroom"
+          extra="(Photography)"
+          description="In my free time I like to take photographs that includes everything from nature, people or tech."
+        />
+        <Photography />
+      </Wrapper>
+    </>
+  );
 }
-
-export default PhotographyPage;

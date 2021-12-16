@@ -97,28 +97,42 @@ const MobileContact = styled.li`
   }
 `;
 
+const TopLine = styled.div`
+  height: 2px;
+  width: 100%;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: ${({ theme }) => theme.colors.primary}; ;
+`;
+
 export default function Header() {
   return (
-    <HeaderWrapper>
-      <HeaderContainer>
-        <Link href="/">
-          <Logo>
-            <p>Gunnar Sigurðarson</p>
-          </Logo>
-        </Link>
-        <MenuList>
-          <ListItem>
-            <p>
-              Let's talk —{" "}
-              <a href="mailto:hello@sigurdarson.is">hello@sigurdarson.is</a>
-            </p>
-          </ListItem>
+    <>
+      <TopLine />
+      <HeaderWrapper>
+        <HeaderContainer>
+          <Link href="/">
+            <Logo>
+              <p>Gunnar Sigurðarson</p>
+            </Logo>
+          </Link>
+          <MenuList>
+            <ListItem>
+              <p>
+                Let's talk —{" "}
+                <a href="mailto:hello@sigurdarson.is">hello@sigurdarson.is</a>
+              </p>
+            </ListItem>
 
-          <MobileContact>
-            <a href="mailto:hello@sigurdarson.is">Let's talk</a>
-          </MobileContact>
-        </MenuList>
-      </HeaderContainer>
-    </HeaderWrapper>
+            <MobileContact>
+              <a href="mailto:hello@sigurdarson.is">Let's talk</a>
+            </MobileContact>
+          </MenuList>
+        </HeaderContainer>
+      </HeaderWrapper>
+    </>
   );
 }
