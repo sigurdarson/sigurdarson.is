@@ -1,1 +1,3 @@
 ## My personal website
+
+The 2.0 homepage layout is inspiered by a personal site I ones saw, unfortunetely I do not remember the link... 
