@@ -16,18 +16,27 @@ import Footer from "../components/footer/footer";
 const GlobalStyle = createGlobalStyle`
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'iA Writer Quattro';
   font-style: normal;
   font-weight: 500;
-  src: url(/fonts/Inter-Medium.ttf);
+  src: url(/fonts/iAWriterQuattroS-Bold.woff);
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'iA Writer Quattro';
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/Inter-Regular.ttf);
+  src: url(/fonts/iAWriterQuattroS-Regular.woff);
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'iA Writer Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/iAWriterMonoS-Regular.woff);
   font-display: swap;
 }
 
@@ -35,12 +44,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'iA Writer Quattro', sans-serif;
     background: #09090b;
   }
 
   p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'iA Writer Quattro', sans-serif;
     font-weight: 400;
     line-height: 1.6;
   }
@@ -65,16 +74,16 @@ const GlobalStyle = createGlobalStyle`
 const theme = {
   colors: {
     //Brand
-    primary: "rgb(85, 172, 238)",
-    primary12: "rgb(85, 172, 238, 0.12)",
-    primary24: "rgb(85, 172, 238, 0.24)",
+    primary: "rgb(91, 82, 255)",
+    primary12: "rgb(91, 82, 255, 0.12)",
+    primary24: "rgb(91, 82, 255, 0.24)",
 
     //UI
-    background: "#050505",
-    panel: "#191920",
-    panelHover: "#23232c",
-    border: "rgba(144, 144, 144, 0.12)",
-    paragraph: "#9FA2AF",
+    background: "#090909",
+    panel: "#101010",
+    panelHover: "#141414",
+    border: "#242424",
+    paragraph: "#9F9EAB",
 
     // General
     white: "#ffffff",
