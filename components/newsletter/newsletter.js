@@ -87,7 +87,7 @@ const Spacer = styled.div`
 `;
 
 const Button = styled.button`
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.primary12};
   border: none;
   display: flex;
   justify-content: center;
@@ -102,12 +102,12 @@ const Button = styled.button`
   -moz-transition: background 0.2s ease;
 
   &:hover {
-    background: rgb(91, 82, 255, 0.72);
+    background: ${({ theme }) => theme.colors.primary24};
   }
 `;
 
 const ButtonText = styled.span`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.primary};
   text-align: center;
   font-weight: 400;
   font-size: 16px;
