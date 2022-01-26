@@ -11,7 +11,7 @@ const HeaderWrapper = styled.header`
   -webkit-backdrop-filter: saturate(100%) blur(48px);
   z-index: 99;
   position: sticky;
-  top: 0;
+  top: 2px;
   left: 0;
   right: 0;
   padding: 0 24px;
@@ -30,11 +30,12 @@ const HeaderContainer = styled.div`
 
 const Logo = styled.a`
   cursor: pointer;
-  transform: translateY(2px);
-  --webkit-transform: translateY(2px);
-  --moz-transform: translateY(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   p {
+    margin-left: 4px;
     height: 40px;
     color: ${({ theme }) => theme.colors.white};
     line-height: 20px;
@@ -116,7 +117,8 @@ export default function Header() {
         <HeaderContainer>
           <Link href="/">
             <Logo>
-              <p>Gunnar Sigurðarson</p>
+              <img src="/img/logo.svg" alt="Sig Logo" />
+              <p>Sigurðarson</p>
             </Logo>
           </Link>
           <MenuList>

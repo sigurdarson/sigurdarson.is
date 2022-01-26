@@ -65,16 +65,16 @@ const GlobalStyle = createGlobalStyle`
 const theme = {
   colors: {
     //Brand
-    primary: "rgb(91, 82, 255)",
-    primary12: "rgb(91, 82, 255, 0.12)",
-    primary24: "rgb(91, 82, 255, 0.24)",
+    primary: "rgb(188, 253, 46)",
+    primary12: "rgb(188, 253, 46, 0.12)",
+    primary24: "rgb(188, 253, 46, 0.24)",
 
     //UI
     background: "#090909",
-    panel: "#101010",
-    panelHover: "#141414",
-    border: "#242424",
-    paragraph: "#9F9EAB",
+    panel: "#151515",
+    panelHover: "#1C1C1C",
+    border: "#222222",
+    paragraph: "#87878A",
 
     // General
     white: "#ffffff",
