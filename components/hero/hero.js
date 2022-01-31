@@ -1,5 +1,17 @@
-import styled from "styled-components";
 import Link from "next/link";
+import styled, { keyframes } from "styled-components";
+
+const appear = keyframes`
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 //Styled Compoenents
 const Hero = styled.section`
@@ -25,20 +37,8 @@ const HeroContainer = styled.div`
   }
 `;
 
-const HeroContent = styled.div``;
-
-const HeroContentHigh = styled.div`
-  height: calc(100vh - 228px);
-  width: 1200px;
-  position: fixed;
-
-  pointer-events: none;
-
-  @media (max-width: 992px) {
-    position: relative;
-    width: auto;
-    height: auto;
-  }
+const HeroContent = styled.div`
+  animation: ${appear} 0.4s ease forwards;
 `;
 
 const Title = styled.h1`
@@ -99,60 +99,6 @@ const SiteLink = styled.a`
   }
 `;
 
-const ExternalLink = styled.a`
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.primary};
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  pointer-events: auto;
-
-  img {
-    margin-left: 4px;
-    transition: transform 0.2s ease;
-    -webkit-transition: transform 0.2s ease;
-    -moz-transition: transform 0.2s ease;
-  }
-
-  &:hover {
-    img {
-      transform: translateX(4px) translateY(-4px);
-    }
-  }
-`;
-
-const Nav = styled.ul`
-  display: flex;
-  position: absolute;
-  right: 0;
-  bottom: 48px;
-  list-style: none;
-
-  @media (max-width: 992px) {
-    position: relative;
-    flex-direction: column;
-    bottom: 0;
-  }
-`;
-
-const NavItem = styled.li`
-  margin-left: 8px;
-  padding: 8px;
-  background: ${({ theme }) => theme.colors.primary12};
-  border-radius: 6px;
-
-  @media (max-width: 992px) {
-    margin-left: 0px;
-    margin-bottom: 16px;
-
-    padding: 0;
-    background: transparent;
-  }
-`;
-
 export default function HeroHome() {
   return (
     <>
@@ -163,7 +109,7 @@ export default function HeroHome() {
               I focus on creating meaningful experiences through design.
             </Title>
             <Description>
-              Hey!‏‏‎ ‎I’m Gunnar, a product & brand designer, and a front-end
+              Hey! I’m Gunnar, a product & brand designer, and a front-end
               developer, currently located in Copenhagen, Denmark.
             </Description>
             <Link href="/about">
@@ -173,46 +119,6 @@ export default function HeroHome() {
               </SiteLink>
             </Link>
           </HeroContent>
-          <HeroContentHigh>
-            <Nav>
-              <NavItem>
-                <Link href="/notes">
-                  <SiteLink>
-                    Notes
-                    <img src="/img/arrow-right.svg" alt="Arrow right" />
-                  </SiteLink>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link href="/photography">
-                  <SiteLink>
-                    Darkroom
-                    <img src="/img/arrow-right.svg" alt="Arrow right" />
-                  </SiteLink>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <ExternalLink href="/twitter" target="_blank">
-                  Twitter
-                  <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
-                </ExternalLink>
-              </NavItem>
-
-              <NavItem>
-                <ExternalLink href="/linkedin" target="_blank">
-                  LinkedIn
-                  <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
-                </ExternalLink>
-              </NavItem>
-
-              <NavItem>
-                <ExternalLink href="/dribbble" target="_blank">
-                  Dribbble
-                  <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
-                </ExternalLink>
-              </NavItem>
-            </Nav>
-          </HeroContentHigh>
         </HeroContainer>
       </Hero>
     </>

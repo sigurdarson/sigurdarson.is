@@ -1,10 +1,22 @@
 import Head from "next/head";
 
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { NextSeo } from "next-seo";
 
 //Components
 import PageTitle from "../components/pagetitle/pagetitle";
+
+const appear = keyframes`
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 //Styled Components
 const Wrapper = styled.main`
@@ -12,6 +24,9 @@ const Wrapper = styled.main`
 `;
 
 const AboutSection = styled.section`
+  transform: translateY(24px);
+  opacity: 0;
+  animation: ${appear} 0.4s 0.2s ease forwards;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -24,13 +39,13 @@ const AboutSection = styled.section`
   }
 
   a {
-    text-decoration: underline;
-    transition: color 0.2s ease;
-    -webkit-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
+    color: ${({ theme }) => theme.colors.primary};
+    transition: opacity 0.2s ease;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.white};
+      opacity: 0.72;
     }
   }
 
@@ -67,7 +82,7 @@ export default function AboutPage() {
       <Wrapper>
         <PageTitle
           title="About me"
-          description="Hey!‏‏‎ ‎I’m Gunnar, a product & brand designer, and a front-end developer, currently located in Copenhagen, Denmark."
+          description="Hey! I’m Gunnar, a product & brand designer, and a front-end developer, currently located in Copenhagen, Denmark."
         />
         <AboutSection>
           <AboutImage />
@@ -98,7 +113,7 @@ export default function AboutPage() {
             adding to{" "}
             <a href="https://myprivacy.is" target="_blank">
               MyPrivacy
-            </a>{" "}
+            </a>
             , a place where you can take control of your data and your privacy!
             <br />
             <br />

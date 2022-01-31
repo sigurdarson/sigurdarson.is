@@ -1,8 +1,23 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const appear = keyframes`
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 //Styled Components
 const NewsletterContainer = styled.div`
+  transform: translateY(24px);
+  opacity: 0;
+  animation: ${appear} 0.4s 0.2s ease forwards;
   margin-top: 96px;
   @media (max-width: 768px) {
     margin: 48px 24px 0 24px;

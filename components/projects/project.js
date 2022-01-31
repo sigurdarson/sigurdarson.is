@@ -1,110 +1,93 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Link from "next/link";
+
+const appear = keyframes`
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 //Styled Compoenents
 const Project = styled.div`
-  max-width: 552px;
-  margin-bottom: 96px;
-`;
-
-const ExternalLink = styled.a`
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.primary};
-  display: flex;
-  align-items: center;
+  transform: translateY(24px);
+  opacity: 0;
+  animation: ${appear} 0.4s 0.2s ease forwards;
   cursor: pointer;
-  margin-bottom: 16px;
-
-  img {
-    margin-left: 4px;
-    transition: transform 0.2s ease;
-    -webkit-transition: transform 0.2s ease;
-    -moz-transition: transform 0.2s ease;
-  }
+  max-width: 1200px;
+  background: ${({ theme }) => theme.colors.panel};
+  padding: 48px 96px 0 96px;
+  border-radius: 16px;
+  margin-bottom: 48px;
+  transition: background 0.2s ease;
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
 
   &:hover {
-    img {
-      transform: translateX(4px) translateY(-4px);
-    }
+    background: ${({ theme }) => theme.colors.border};
   }
-`;
-
-const Description = styled.p`
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
-  color: ${({ theme }) => theme.colors.paragraph};
-  margin-bottom: 16px;
-  max-width: 448px;
-`;
-
-const TeamTitle = styled.p`
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
-  color: ${({ theme }) => theme.colors.white};
-  margin-bottom: 16px;
-  max-width: 448px;
-`;
-
-const TeamMember = styled.div`
-  display: flex;
-  align-items: center;
-
-  div {
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    background: #ffffff24;
-    margin-right: 8px;
-  }
-`;
-
-const TeamLink = styled.a`
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.white};
-  display: flex;
-  align-items: center;
-  cursor: pointer;
 
   img {
-    margin-left: 4px;
-    transition: transform 0.2s ease;
-    -webkit-transition: transform 0.2s ease;
-    -moz-transition: transform 0.2s ease;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
   }
 
-  &:hover {
-    img {
-      transform: translateX(4px) translateY(-4px);
+  @media (max-width: 992px) {
+    padding: 24px 24px 0 24px;
+    margin-bottom: 24px;
+  }
+`;
+
+const ProjectInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "iA Writer Quattro", sans-serif;
+    color: ${({ theme }) => theme.colors.white};
+    margin: 0 16px 0 0;
+  }
+
+  span {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: ${({ theme }) => theme.colors.primary12};
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (max-width: 992px) {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    h3 {
+      font-size: 16px;
     }
   }
 `;
 
 export default function ProjectComponent(props) {
   return (
-    <Project>
-      <ExternalLink href={props.link} target="_blank">
-        {props.company}
-        <img src="/img/arrow-up-right.svg" alt="Arrow up right" />
-      </ExternalLink>
-
-      <Description>{props.description}</Description>
-      <TeamTitle>Team:</TeamTitle>
-      <TeamMember>
-        <div></div>
-
-        <TeamLink href={props.personLink} target="_blank">
-          {props.personName}
-          <img src="/img/arrow-up-right-white.svg" alt="Arrow up right" />
-        </TeamLink>
-      </TeamMember>
-    </Project>
+    <Link href={props.link} target="_blank">
+      <Project>
+        <ProjectInfo>
+          <h3>{props.company}</h3>
+          <span>{props.status}</span>
+        </ProjectInfo>
+        <img src={props.image} />
+      </Project>
+    </Link>
   );
 }

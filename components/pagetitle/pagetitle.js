@@ -1,7 +1,20 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const appear = keyframes`
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 //Styled Components
 const PageTitle = styled.section`
+  animation: ${appear} 0.4s ease forwards;
   padding: 148px 0;
   max-width: 1200px;
   margin: 0 auto;
