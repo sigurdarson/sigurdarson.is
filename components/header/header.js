@@ -1,14 +1,26 @@
 import React, { Component } from "react";
 import Link from "next/link";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+//Animation
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 //Styled Components
 const HeaderWrapper = styled.header`
   width: 100%;
   height: 80px;
   background-color: rgba(9, 9, 11, 0.76);
-  backdrop-filter: saturate(100%) blur(48px);
-  -webkit-backdrop-filter: saturate(100%) blur(48px);
+  backdrop-filter: saturate(180%) blur(48px);
+  -webkit-backdrop-filter: saturate(180%) blur(48px);
   z-index: 99;
   position: sticky;
   top: 2px;
@@ -33,6 +45,10 @@ const Logo = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  svg {
+    animation: ${rotate} 12s linear infinite;
+  }
 
   p {
     margin-left: 4px;
@@ -117,7 +133,17 @@ export default function Header() {
         <HeaderContainer>
           <Link href="/">
             <Logo>
-              <img src="/img/logo.svg" alt="Sig Logo" />
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.5001 20.9996L10.5001 15.6209L6.69673 19.4243L4.57523 17.3029L8.37857 13.4995H3L3 10.4996H8.3785L4.57503 6.6962L6.69666 4.57527L10.5003 8.37891L10.5003 3H13.5003L13.5003 8.37905L17.3036 4.57576L19.425 6.69669L15.6216 10.5H21L21 13.5H15.6207L19.424 17.3034L17.3029 19.4248L13.4997 15.6218L13.4997 21L10.5001 20.9996Z"
+                  fill="#BCFD2E"
+                />
+              </svg>
               <p>Sigurðarson</p>
             </Logo>
           </Link>
