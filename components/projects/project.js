@@ -73,7 +73,7 @@ const ProjectInfo = styled.div`
     margin-bottom: 24px;
 
     h3 {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 `;
