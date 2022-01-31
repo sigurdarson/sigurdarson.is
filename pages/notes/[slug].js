@@ -3,7 +3,7 @@ import { NextSeo } from "next-seo";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import marked from "marked";
+import { marked } from "marked";
 import Link from "next/link";
 
 const Wrapper = styled.main`
