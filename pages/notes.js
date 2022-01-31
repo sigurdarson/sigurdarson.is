@@ -1,10 +1,22 @@
-import styled from 'styled-components';
-import { NextSeo } from 'next-seo';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import Link from 'next/link';
-import { sortByDate } from '../utils';
+import styled, { keyframes } from "styled-components";
+import { NextSeo } from "next-seo";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import Link from "next/link";
+import { sortByDate } from "../utils";
+
+const appear = keyframes`
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 //Styled Components
 const Wrapper = styled.main`
@@ -36,6 +48,9 @@ const NotesSection = styled.section`
 `;
 
 const Note = styled.div`
+  transform: translateY(24px);
+  opacity: 0;
+  animation: ${appear} 0.4s ease forwards;
   padding: 24px;
   margin-bottom: 24px;
   border-radius: 12px;
@@ -55,7 +70,6 @@ const Note = styled.div`
     object-fit: cover;
     margin-bottom: 24px;
     border-radius: 6px;
-    
   }
 
   h3 {
@@ -87,12 +101,12 @@ const Note = styled.div`
 `;
 
 const SEO = {
-  title: 'Notes - Sigurdarson — Brand & Product Designer (UI/UX)',
-  canonical: 'https://sigurdarson.is/notes',
+  title: "Notes - Sigurdarson — Brand & Product Designer (UI/UX)",
+  canonical: "https://sigurdarson.is/notes",
 
   openGraph: {
-    url: 'https://sigurdarson.is/notes',
-    title: 'Notes - Sigurdarson — Brand & Product Designer (UI/UX)',
+    url: "https://sigurdarson.is/notes",
+    title: "Notes - Sigurdarson — Brand & Product Designer (UI/UX)",
   },
 };
 
@@ -106,7 +120,7 @@ export default function NotesPage({ notes }) {
             <Link href={`/notes/${note.slug}`}>
               <a>
                 <Note>
-                  {note.frontmatter.cover_image === 'no'
+                  {note.frontmatter.cover_image === "no"
                     ? false
                     : true && <img src={note.frontmatter.cover_image} />}
                   <h3>{note.frontmatter.title}</h3>
@@ -124,17 +138,17 @@ export default function NotesPage({ notes }) {
 
 export async function getStaticProps() {
   // Get files from notes directory
-  const files = fs.readdirSync(path.join('notes'));
+  const files = fs.readdirSync(path.join("notes"));
 
   // Get slug and frontmatter from notes
   const notes = files.map((filename) => {
     // Create slug
-    const slug = filename.replace('.md', '');
+    const slug = filename.replace(".md", "");
 
     // Get frontmatter
     const markdownWithMeta = fs.readFileSync(
-      path.join('notes', filename),
-      'utf-8'
+      path.join("notes", filename),
+      "utf-8"
     );
 
     const { data: frontmatter } = matter(markdownWithMeta);

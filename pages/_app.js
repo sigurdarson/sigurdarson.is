@@ -57,8 +57,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: rgb(91, 82, 255, 0.12);
-    color: rgb(91, 82, 255);
+    background: rgb(188, 253, 46, 0.12);
+    color: rgb(188, 253, 46);
   }
 `;
 
@@ -111,7 +111,6 @@ export default function App({ Component, pageProps }) {
 
   //Hide Components on 404 page
   const showComponent = router.pathname === "/404" ? false : true;
-  const showNewsletter = router.pathname === ("/404" && "/") ? false : true;
 
   return (
     <>
@@ -133,8 +132,8 @@ export default function App({ Component, pageProps }) {
         <DefaultSeo {...SEO} />
         {showComponent && <Header />}
         <Component {...pageProps} />
-        {showNewsletter && <Newsletter />}
-        {showNewsletter && <Footer />}
+        {showComponent && <Newsletter />}
+        {showComponent && <Footer />}
       </ThemeProvider>
     </>
   );
