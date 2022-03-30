@@ -29,8 +29,8 @@ const MobileMenuWrapper = styled.div`
   padding: 16px 16px 8px 16px;
   border-radius: 16px;
   border: 1px solid #222222;
-  backdrop-filter: saturate(180%) blur(48px);
-  -webkit-backdrop-filter: saturate(180%) blur(48px);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
 `;
 
 const MenuList = styled.ul`
