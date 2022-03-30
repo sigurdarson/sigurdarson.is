@@ -13,6 +13,26 @@ import Header from "../components/header/header";
 import Newsletter from "../components/newsletter/newsletter";
 import Footer from "../components/footer/footer";
 
+const theme = {
+  colors: {
+    //Brand
+    primary: "rgb(188, 253, 46)",
+    primary12: "rgb(188, 253, 46, 0.12)",
+    primary24: "rgb(188, 253, 46, 0.24)",
+
+    //UI
+    background: "rgb(0, 0, 0)",
+    panel: "#141414",
+    panelHover: "#1C1C1C",
+    border: "rgb(255, 255, 255, 0.04)",
+    paragraph: "rgb(255, 255, 255, 0.64)",
+
+    // General
+    white: "#ffffff",
+    black: "#141414",
+  },
+};
+
 const GlobalStyle = createGlobalStyle`
 
 @font-face {
@@ -36,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'iA Writer Quattro', sans-serif;
-    background: #09090b;
+    background: ${({ theme }) => theme.colors.background};
   }
 
   p {
@@ -61,26 +81,6 @@ const GlobalStyle = createGlobalStyle`
     color: rgb(188, 253, 46);
   }
 `;
-
-const theme = {
-  colors: {
-    //Brand
-    primary: "rgb(188, 253, 46)",
-    primary12: "rgb(188, 253, 46, 0.12)",
-    primary24: "rgb(188, 253, 46, 0.24)",
-
-    //UI
-    background: "#090909",
-    panel: "#151515",
-    panelHover: "#1C1C1C",
-    border: "#222222",
-    paragraph: "#87878A",
-
-    // General
-    white: "#ffffff",
-    black: "#141414",
-  },
-};
 
 export default function App({ Component, pageProps }) {
   //Page loader
@@ -127,8 +127,9 @@ export default function App({ Component, pageProps }) {
         />
         <meta name="robots" content="follow, index" />
       </Head>
-      <GlobalStyle />
+
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <DefaultSeo {...SEO} />
         {showComponent && <Header />}
         <Component {...pageProps} />

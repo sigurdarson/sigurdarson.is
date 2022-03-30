@@ -20,15 +20,15 @@ const rotate = keyframes`
 const HeaderWrapper = styled.header`
   width: 100%;
   height: 80px;
-  background-color: rgba(9, 9, 11, 0.76);
-  backdrop-filter: saturate(180%) blur(48px);
-  -webkit-backdrop-filter: saturate(180%) blur(48px);
+  background-color: rgba(0, 0, 0, 0.72);
   z-index: 99;
   position: sticky;
   top: 2px;
   left: 0;
   right: 0;
   padding: 0 24px;
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
 `;
 
 const HeaderContainer = styled.div`

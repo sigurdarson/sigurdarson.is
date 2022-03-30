@@ -25,12 +25,12 @@ const MobileMenuWrapper = styled.div`
   top: 76px;
   right: -16px;
   min-width: 228px;
-  background-color: rgb(16, 16, 16, 0.72);
+  background-color: rgb(0, 0, 0);
   padding: 16px 16px 8px 16px;
   border-radius: 16px;
   border: 1px solid #222222;
-  backdrop-filter: saturate(180%) blur(48px);
-  -webkit-backdrop-filter: saturate(180%) blur(48px);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
 `;
 
 const MenuList = styled.ul`
