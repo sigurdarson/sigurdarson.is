@@ -21,7 +21,7 @@ const PageTitle = styled.section`
 
   h1 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     color: ${({ theme }) => theme.colors.white};
     line-height: 1.5;
     margin-bottom: 12px;
@@ -29,7 +29,7 @@ const PageTitle = styled.section`
 
   span {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     color: ${({ theme }) => theme.colors.paragraph};
     line-height: 1.5;
     margin-bottom: 12px;

@@ -29,7 +29,7 @@ const Project = styled.div`
   -moz-transition: background 0.2s ease;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.border};
+    background: ${({ theme }) => theme.colors.panelHover};
   }
 
   img {
@@ -53,8 +53,8 @@ const ProjectInfo = styled.div`
 
   h3 {
     font-size: 24px;
-    font-weight: 400;
-    font-family: "iA Writer Quattro", sans-serif;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
     color: ${({ theme }) => theme.colors.white};
     margin: 0 16px 0 0;
   }

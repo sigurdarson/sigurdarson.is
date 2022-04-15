@@ -75,7 +75,7 @@ const Note = styled.div`
   h3 {
     font-size: 24px;
     color: ${({ theme }) => theme.colors.white};
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 12px;
     line-height: 1.4;
   }
@@ -83,14 +83,14 @@ const Note = styled.div`
   p {
     font-size: 16px;
     color: ${({ theme }) => theme.colors.paragraph};
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 12px;
   }
 
   span {
     font-size: 16px;
     color: ${({ theme }) => theme.colors.white};
-    font-weight: 400;
+    font-weight: 500;
   }
 
   @media (max-width: 992px) {

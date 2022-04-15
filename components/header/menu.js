@@ -45,18 +45,18 @@ const MenuSplitter = styled.li`
   width: 100%;
   display: flex;
   padding: 0 8px;
-  font-family: "iA Writer Quattro", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   margin-top: 16px;
   margin-bottom: 8px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.6;
   color: ${({ theme }) => theme.colors.paragraph};
 `;
 
 const MenuLink = styled.a`
-  font-family: "iA Writer Quattro", sans-serif;
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   line-height: 1.6;
   height: 40px;
   margin-bottom: 8px;
@@ -100,8 +100,8 @@ const MenuLink = styled.a`
   }
 `;
 const MenuExternalLink = styled.a`
-  font-family: "iA Writer Quattro", sans-serif;
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   line-height: 1.6;
   height: 40px;
   margin-bottom: 8px;
