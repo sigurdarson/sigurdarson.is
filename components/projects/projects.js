@@ -22,8 +22,8 @@ const Projects = styled.div`
 
   h2 {
     font-size: 18px;
-    font-weight: 400;
-    font-family: "iA Writer Quattro", sans-serif;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
     color: ${({ theme }) => theme.colors.white};
     margin-bottom: 48px;
     transform: translateY(24px);

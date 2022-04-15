@@ -55,6 +55,7 @@ const Logo = styled.a`
   p {
     margin-left: 4px;
     height: 40px;
+    font-weight: 500;
     color: ${({ theme }) => theme.colors.white};
     line-height: 20px;
     display: flex;
@@ -248,23 +249,23 @@ class Header extends Component {
                     <path
                       d="M3 12H21"
                       stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M3 6H21"
                       stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M3 18H21"
                       stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </Menubutton>

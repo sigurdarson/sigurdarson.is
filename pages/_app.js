@@ -36,18 +36,18 @@ const theme = {
 const GlobalStyle = createGlobalStyle`
 
 @font-face {
-  font-family: 'iA Writer Quattro';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 500;
-  src: url(/fonts/iAWriterQuattroS-Bold.woff);
+  font-weight: 600;
+  src: url(/fonts/Inter-SemiBold.ttf);
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'iA Writer Quattro';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 400;
-  src: url(/fonts/iAWriterQuattroS-Regular.woff);
+  font-weight: 500;
+  src: url(/fonts/Inter-Medium.ttf);
   font-display: swap;
 }
 
@@ -55,13 +55,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'iA Writer Quattro', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: ${({ theme }) => theme.colors.background};
   }
 
   p {
-    font-family: 'iA Writer Quattro', sans-serif;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     line-height: 1.6;
   }
 
@@ -117,7 +117,13 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link
           rel="preload"
-          href="/fonts/iAWriterQuattroS-Regular.woff"
+          href="/fonts/Inter-SemiBold.ttf"
+          as="font"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Inter-Medium.ttf"
           as="font"
           crossOrigin="anonymous"
         />

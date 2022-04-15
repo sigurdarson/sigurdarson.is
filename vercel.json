@@ -3,7 +3,7 @@
     "trailingSlash": false,
     "headers": [
       {
-        "source": "/fonts/iAWriterQuattroS-Bold.woff",
+        "source": "/fonts/Inter-SemiBold.ttf",
         "headers": [
           {
             "key": "Cache-Control",
@@ -12,7 +12,7 @@
         ]
       },
       {
-        "source": "/fonts/iAWriterQuattroS-Regular.woff",
+        "source": "/fonts/Inter-Medium.ttf",
         "headers": [
           {
             "key": "Cache-Control",

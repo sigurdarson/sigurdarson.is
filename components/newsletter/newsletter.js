@@ -67,8 +67,8 @@ const Input = styled.input`
   margin: 0;
   border-radius: 6px;
   outline: none;
-  font-family: "iA Writer Quattro", sans-serif;
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 16px;
   color: ${({ theme }) => theme.colors.paragraph};
   -webkit-appearance: none;
@@ -124,9 +124,9 @@ const Button = styled.button`
 const ButtonText = styled.span`
   color: ${({ theme }) => theme.colors.primary};
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
-  font-family: "iA Writer Quattro", sans-serif;
+  font-family: 'Inter', sans-serif;
 `;
 
 const Error = styled.div`

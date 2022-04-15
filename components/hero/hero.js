@@ -43,7 +43,7 @@ const HeroContent = styled.div`
 
 const Title = styled.h1`
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 500;
   color: ${({ theme }) => theme.colors.white};
   line-height: 1.5;
   margin-bottom: 16px;
@@ -55,7 +55,7 @@ const Title = styled.h1`
 
 const Description = styled.p`
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.5;
   color: ${({ theme }) => theme.colors.paragraph};
   margin-bottom: 16px;
@@ -75,7 +75,7 @@ const Description = styled.p`
 
 const SiteLink = styled.a`
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.5;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.primary};
