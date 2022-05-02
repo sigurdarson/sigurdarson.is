@@ -186,7 +186,6 @@ export default function Newsletter() {
 
     setEmail("");
     setStatus("succeeded");
-    panelbear("track", "SignupForNewsletter");
   }
 
   return (
