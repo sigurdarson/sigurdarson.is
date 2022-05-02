@@ -34,7 +34,7 @@ const HeaderWrapper = styled.header`
 const HeaderContainer = styled.div`
   height: 80px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1064px;
   position: relative;
   margin: 0 auto;
   display: flex;

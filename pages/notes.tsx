@@ -75,7 +75,7 @@ const Note = styled.div`
   h3 {
     font-size: 24px;
     color: ${({ theme }) => theme.colors.white};
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 12px;
     line-height: 1.4;
   }

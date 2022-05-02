@@ -257,6 +257,33 @@ export default function MobileMenu(props) {
             </MenuLink>
           </Link>
         </MenuItem>
+        <MenuItem onClick={props.click}>
+          <Link href="/dashboard">
+            <MenuLink>
+              Dashboard
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 13.3337L13.1592 8.74773C13.6067 8.34994 13.6067 7.65071 13.1592 7.25292L8 2.66699"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2 8H12.6667"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </MenuLink>
+          </Link>
+        </MenuItem>
         <MenuSplitter>Socials</MenuSplitter>
         <MenuItem onClick={props.click}>
           <MenuExternalLink href="/twitter" target="_blank">
