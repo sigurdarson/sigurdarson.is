@@ -2,6 +2,7 @@ import useSWR from 'swr';
 import styled from "styled-components";
 
 import fetcher from 'lib/fetcher';
+import { Unsplash } from 'lib/types';
 import MetricCard from './card';
 
 //Styled-components
@@ -17,7 +18,7 @@ gap: 32px;
 `
 
 export default function UnsplashCard() {
-  const { data } = useSWR('/api/unsplash', fetcher);
+  const { data } = useSWR<Unsplash>('/api/unsplash', fetcher);
 
   const downloads = new Number(data?.downloads);
   const views = new Number(data?.views);
