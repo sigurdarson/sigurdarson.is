@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 //Styled Components
 const PhotoContainer = styled.div`
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 
   @media (max-width: 992px) {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 `;
 

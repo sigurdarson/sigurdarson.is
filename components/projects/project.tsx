@@ -80,7 +80,8 @@ const ProjectInfo = styled.div`
 
 export default function ProjectComponent(props) {
   return (
-    <Link href={props.link} target="_blank">
+    <Link href={props.link}>
+      <a target="_blank">
       <Project>
         <ProjectInfo>
           <h3>{props.company}</h3>
@@ -88,6 +89,7 @@ export default function ProjectComponent(props) {
         </ProjectInfo>
         <img src={props.image} />
       </Project>
+      </a>
     </Link>
   );
 }

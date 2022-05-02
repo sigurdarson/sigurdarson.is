@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import styled, { keyframes } from "styled-components";
 import { NextSeo } from "next-seo";
 
@@ -27,7 +25,7 @@ const AboutSection = styled.section`
   transform: translateY(24px);
   opacity: 0;
   animation: ${appear} 0.4s 0.2s ease forwards;
-  max-width: 1200px;
+  max-width: 1064px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;

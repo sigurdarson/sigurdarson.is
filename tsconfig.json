@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": false,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "baseUrl": ".",
+      "incremental": true,
+      "paths": {
+        "contentlayer/generated": ["./.contentlayer/generated"]
+      }
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx",
+      ".contentlayer/generated"
+, "pages/dashboard.tsx", "pages/api/unsplash.ts", "components/metrics/unsplash.tsx", "components/header/header.js", "pages/photography.js", "pages/about.js", "pages/_document.js", "utils/index.js"    ],
+    "exclude": ["node_modules"]
+  }

@@ -17,7 +17,7 @@ const appear = keyframes`
 
 //Styled Compoenents
 const Projects = styled.div`
-  max-width: 1200px;
+  max-width: 1064px;
   margin: 0 auto;
 
   h2 {

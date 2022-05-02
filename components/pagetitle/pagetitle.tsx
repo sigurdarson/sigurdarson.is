@@ -15,8 +15,8 @@ const appear = keyframes`
 //Styled Components
 const PageTitle = styled.section`
   animation: ${appear} 0.4s ease forwards;
-  padding: 148px 0;
-  max-width: 1200px;
+  padding: 148px 0 96px 0;
+  max-width: 1064px;
   margin: 0 auto;
 
   h1 {
@@ -41,6 +41,17 @@ const PageTitle = styled.section`
     max-width: 448px;
   }
 
+  a {
+    color: ${({ theme }) => theme.colors.primary};
+    transition: opacity 0.2s ease;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.72;
+    }
+  }
+
   @media (max-width: 1092px) {
     padding: 96px 0;
   }
@@ -50,13 +61,32 @@ const PageTitle = styled.section`
   }
 `;
 
-export default function PageTitleComponent(props) {
+export default function PageTitleComponent({ title, extra, description, link, linkText }) {
+
   return (
     <PageTitle>
       <h1>
-        {props.title} <span>{props.extra}</span>
+        {title} <span>{extra}</span>
       </h1>
-      <p>{props.description}</p>
+
+      {link ? (
+      <p>
+        {description} 
+        <a 
+          href={link}
+          aria-label={linkText}
+          target="_blank"
+          rel="noopener noreferrer">
+            {linkText}
+          </a>
+        </p>
+        ) : 
+        (
+          <p>
+            {description}
+          </p>
+        )
+      }
     </PageTitle>
   );
 }

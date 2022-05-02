@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import NProgress from "nprogress";
 import * as Fathom from "fathom-client";
 import { DefaultSeo } from "next-seo";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
@@ -22,7 +21,7 @@ const theme = {
 
     //UI
     background: "rgb(0, 0, 0)",
-    panel: "#141414",
+    panel: "#090909",
     panelHover: "#1C1C1C",
     border: "rgb(255, 255, 255, 0.04)",
     paragraph: "rgb(255, 255, 255, 0.64)",
