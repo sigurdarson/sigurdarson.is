@@ -24,6 +24,6 @@
       "**/*.ts",
       "**/*.tsx",
       ".contentlayer/generated"
-, "pages/dashboard.tsx", "pages/api/unsplash.ts", "components/metrics/unsplash.tsx", "components/header/header.js"    ],
+, "pages/dashboard.tsx", "pages/api/unsplash.ts", "components/metrics/unsplash.tsx", "components/header/header.js", "pages/photography.js", "pages/about.js", "pages/_document.js"    ],
     "exclude": ["node_modules"]
   }
