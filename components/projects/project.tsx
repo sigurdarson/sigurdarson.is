@@ -54,7 +54,7 @@ const ProjectInfo = styled.div`
   h3 {
     font-size: 24px;
     font-weight: 500;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     color: ${({ theme }) => theme.colors.white};
     margin: 0 16px 0 0;
   }
@@ -82,13 +82,13 @@ export default function ProjectComponent(props) {
   return (
     <Link href={props.link}>
       <a target="_blank">
-      <Project>
-        <ProjectInfo>
-          <h3>{props.company}</h3>
-          <span>{props.status}</span>
-        </ProjectInfo>
-        <img src={props.image} />
-      </Project>
+        <Project>
+          <ProjectInfo>
+            <h3>{props.company}</h3>
+            <span>{props.status}</span>
+          </ProjectInfo>
+          <img src={props.image} />
+        </Project>
       </a>
     </Link>
   );

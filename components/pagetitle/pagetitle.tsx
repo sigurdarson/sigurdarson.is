@@ -38,7 +38,7 @@ const PageTitle = styled.section`
   p {
     font-size: 16px;
     color: ${({ theme }) => theme.colors.paragraph};
-    max-width: 448px;
+    max-width: 496px;
   }
 
   a {
@@ -61,8 +61,13 @@ const PageTitle = styled.section`
   }
 `;
 
-export default function PageTitleComponent({ title, extra, description, link, linkText }) {
-
+export default function PageTitleComponent({
+  title,
+  extra,
+  description,
+  link,
+  linkText,
+}) {
   return (
     <PageTitle>
       <h1>
@@ -70,23 +75,20 @@ export default function PageTitleComponent({ title, extra, description, link, li
       </h1>
 
       {link ? (
-      <p>
-        {description} 
-        <a 
-          href={link}
-          aria-label={linkText}
-          target="_blank"
-          rel="noopener noreferrer">
+        <p>
+          {description}
+          <a
+            href={link}
+            aria-label={linkText}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {linkText}
           </a>
         </p>
-        ) : 
-        (
-          <p>
-            {description}
-          </p>
-        )
-      }
+      ) : (
+        <p>{description}</p>
+      )}
     </PageTitle>
   );
 }

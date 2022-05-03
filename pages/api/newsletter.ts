@@ -1,19 +1,19 @@
-import fetch from 'isomorphic-unfetch';
+import fetch from "isomorphic-unfetch";
 
 export default async (req, res) => {
   const { email } = req.body;
 
   if (!email) {
-    return res.status(400).json({ error: 'Email is required' });
+    return res.status(400).json({ error: "Email is required" });
   }
 
   const LIST_ID = process.env.MAILCHIMP_LIST_ID;
   const API_KEY = process.env.MAILCHIMP_API_KEY;
-  const DATACENTER = API_KEY.split('-')[1];
+  const DATACENTER = API_KEY.split("-")[1];
 
   const data = {
     email_address: email,
-    status: 'subscribed',
+    status: "subscribed",
   };
 
   const response = await fetch(
@@ -22,13 +22,13 @@ export default async (req, res) => {
       body: JSON.stringify(data),
       headers: {
         Authorization: `apikey ${API_KEY}`,
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
-      method: 'POST',
+      method: "POST",
     }
   ).then((res) => res.json());
 
-  if (response.status === 400 && response.title === 'Member Exists') {
+  if (response.status === 400 && response.title === "Member Exists") {
     return res.status(400).json({
       error: null,
     });
@@ -41,5 +41,5 @@ export default async (req, res) => {
     });
   }
 
-  return res.status(201).json({ error: '' });
+  return res.status(201).json({ error: "" });
 };

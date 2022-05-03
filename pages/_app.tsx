@@ -15,19 +15,19 @@ import Footer from "../components/footer/footer";
 const theme = {
   colors: {
     //Brand
-    primary: "rgb(188, 253, 46)",
-    primary12: "rgb(188, 253, 46, 0.12)",
-    primary24: "rgb(188, 253, 46, 0.24)",
+    primary: "rgba(188, 253, 46, 1)",
+    primary12: "rgba(188, 253, 46, 0.12)",
+    primary24: "rgba(188, 253, 46, 0.24)",
 
     //UI
-    background: "rgb(0, 0, 0)",
-    panel: "#090909",
-    panelHover: "#1C1C1C",
-    border: "rgb(255, 255, 255, 0.04)",
-    paragraph: "rgb(255, 255, 255, 0.64)",
+    background: "rgba(0, 0, 0, 1)",
+    panel: "rgba(18, 18, 18, 1)",
+    panelHover: "rgba(22, 22, 22, 1)",
+    border: "rgba(255, 255, 255, 0.04)",
+    paragraph: "rgba(255, 255, 255, 0.64)",
 
     // General
-    white: "#ffffff",
+    white: "rgba(255, 255, 255, 1)",
     black: "#141414",
   },
 };
