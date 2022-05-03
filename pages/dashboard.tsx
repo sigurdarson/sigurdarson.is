@@ -39,11 +39,11 @@ const MetricsWrapper = styled.div`
 
 const SEO = {
   title: "Dashboard - Sigurdarson — Brand & Product Designer (UI/UX)",
-  canonical: "https://sigurdarson.is/photography",
+  canonical: "https://sigurdarson.is/dashboard",
 
   openGraph: {
-    url: "https://sigurdarson.is/photography",
-    title: "Photography - Sigurdarson — Brand & Product Designer (UI/UX)",
+    url: "https://sigurdarson.is/dashboard",
+    title: "Dashboard - Sigurdarson — Brand & Product Designer (UI/UX)",
   },
 };
 

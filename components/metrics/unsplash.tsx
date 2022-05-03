@@ -24,8 +24,6 @@ export default function UnsplashCard() {
   const views = new Number(data?.views);
   const link = 'https://unsplash.com/@sigurdarson';
 
-  console.log(downloads)
-
   return (
     <MetricGrid >
       <MetricCard
