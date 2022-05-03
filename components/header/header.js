@@ -66,6 +66,12 @@ const Logo = styled.a`
     -webkit-transition: opacity 0.3s ease;
     -moz-transition: opacity 0.3s ease;
   }
+
+  &:hover {
+    svg {
+      transform: scale(20);
+    }
+  }
 `;
 
 const MenuList = styled.ul`

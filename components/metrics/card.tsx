@@ -9,10 +9,10 @@ const CardContainer = styled.div`
   border-radius: 12px;
   border: 1px solid ${({ theme }) => theme.colors.border};
 
-h3 {
-  font-size: 32px;
-  font-weight: 500;
-}
+  h3 {
+    font-size: 32px;
+    font-weight: 500;
+  }
 `;
 
 const ExternalLink = styled.a`
@@ -58,37 +58,36 @@ const ExternalLink = styled.a`
 export default function MetricCard({ header, link, metric }) {
   return (
     <CardContainer>
-
-    <ExternalLink href={link} aria-label={header}
+      <ExternalLink
+        href={link}
+        aria-label={header}
         target="_blank"
-        rel="noopener noreferrer" >
-            {header}
-            <svg
-              width="16"
-              height="16"
-              fill="none"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12.0003 11.3333V5C12.0003 4.44772 11.5526 4 11.0003 4H4.66699"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4 12.0003L11.3333 4.66699"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </ExternalLink>
-  
-      <h3>
+        rel="noopener noreferrer"
+      >
+        {header}
+        <svg
+          width="16"
+          height="16"
+          fill="none"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.0003 11.3333V5C12.0003 4.44772 11.5526 4 11.0003 4H4.66699"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12.0003L11.3333 4.66699"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </ExternalLink>
 
-        {metric > 0 ? metric.toLocaleString() : '-'}
-      </h3>
+      <h3>{metric > 0 ? metric.toLocaleString() : "-"}</h3>
     </CardContainer>
   );
 }
